@@ -23,6 +23,8 @@ alias vim="nvim"
 
 autoload -U promptinit
 promptinit
+PROMPT="%{[38;05;38m%}%1/ $ %{$reset_color%}"
+RPROMPT=""
 
 # Commands for the current directory to display in title
 precmd () {print -Pn "\e]2; %~/ \a"}
@@ -33,10 +35,11 @@ bindkey -v
 
 function zle-line-init zle-keymap-select {
   if [[ $KEYMAP == vicmd ]]; then
-    PROMPT="%{[38;05;38m%}%1~ → %{$reset_color%}"
+    VIM_MODE="NORMAL"
   elif [[ $KEYMAP == main ]] || [[ $KEYMAP == viins ]] || [[ $KEYMAP = '' ]]; then
-    PROMPT="%{[38;05;38m%}%1~ $ %{$reset_color%}"
+    VIM_MODE="INSERT"
   fi
+  RPROMPT="%{[38;05;38m%}% $VIM_MODE%{$reset_color%}"
   zle reset-prompt
 }
 
