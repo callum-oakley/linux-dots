@@ -38,7 +38,7 @@ function zle-line-init zle-keymap-select {
   elif [[ $KEYMAP == main ]] || [[ $KEYMAP == viins ]] || [[ $KEYMAP = '' ]]; then
     separator="$"
   fi
-  PROMPT="%{[38;05;38m%}%1/ $separator %{$reset_color%}"
+  PROMPT=$'\n'"%{[38;05;38m%}%1/ $separator %{$reset_color%}"
   zle reset-prompt
 }
 
