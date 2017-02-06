@@ -1,0 +1,10 @@
+[user]
+    name = Callum Oakley
+    email = callum@pusher.com
+
+[push]
+    default = simple
+
+[alias]
+    graph = log --graph --decorate --oneline
+    ignore = "!gi() { curl -L -s https://www.gitignore.io/api/$@ ;}; gi"
