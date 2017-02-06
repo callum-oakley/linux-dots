@@ -31,6 +31,7 @@ preexec () {print -Pn "\e]2; %~/ \a"}
 
 # zsh vi bindings config
 bindkey -v
+bindkey "^R" history-incremental-search-backward
 
 function zle-line-init zle-keymap-select {
   if [[ $KEYMAP == vicmd ]]; then
