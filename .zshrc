@@ -26,8 +26,8 @@ promptinit
 RPROMPT="%{`tput sitm`%}%T%{`tput ritm`%}"
 
 # Commands for the current directory to display in title
-precmd () {print -Pn "\e]2; %~/ \a"}
-preexec () {print -Pn "\e]2; %~/ \a"}
+precmd () {print -Pn "\e]2; %1/ \a"}
+preexec () {print -Pn "\e]2; %1/ \a"}
 
 # zsh vi bindings config
 bindkey -v
