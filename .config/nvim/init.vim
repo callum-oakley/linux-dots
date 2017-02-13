@@ -61,6 +61,7 @@ nnoremap <leader>= <c-w>=
 nnoremap <leader>N :bp<cr>
 nnoremap <leader>O O<esc>O
 nnoremap <leader>P "*P
+nnoremap <leader>a <nop>
 nnoremap <leader>ad :%d*<cr>
 nnoremap <leader>ak :%d_<cr>
 nnoremap <leader>ay :%y*<cr>
