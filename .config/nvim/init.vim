@@ -46,6 +46,7 @@ nnoremap <c-up> :m--<cr>
 nnoremap <cr> :
 nnoremap <esc> :noh<cr><esc>
 nnoremap <home> ^
+nnoremap <leader> <nop>
 nnoremap <leader>* *N
 nnoremap <leader><c-down> :below sp<cr>
 nnoremap <leader><c-left> :above vsp<cr>
