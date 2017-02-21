@@ -14,9 +14,9 @@ set listchars=tab:▸·,trail:·
 
 " tabs
 set expandtab
-set shiftwidth=2
+set shiftwidth=4
 set smarttab
-set tabstop=2
+set tabstop=4
 
 " hilighting
 syntax on
