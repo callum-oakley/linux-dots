@@ -21,6 +21,10 @@ alias sed="gsed"
 alias vi="nvim"
 alias vim="nvim"
 
+function vin() {
+  vi ~/notes/$1.md
+}
+
 autoload -U promptinit
 promptinit
 RPROMPT="%{`tput sitm`%}%T%{`tput ritm`%}"
