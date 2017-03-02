@@ -42,6 +42,8 @@ nmap j ys
 nnoremap <PageDown> 10+zz
 nnoremap <PageUp> 10-zz
 nnoremap <c-down> :m+<cr>
+nnoremap <c-left> <<
+nnoremap <c-right> >>
 nnoremap <c-up> :m--<cr>
 nnoremap <cr> :
 nnoremap <esc> :noh<cr><esc>
