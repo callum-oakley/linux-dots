@@ -4,9 +4,8 @@ hi CursorLineNr cterm=NONE ctermfg=38 ctermbg=NONE
 
 " italics
 hi Comment cterm=italic ctermfg=NONE ctermbg=NONE
-hi String cterm=italic ctermfg=NONE ctermbg=NONE
-hi Character cterm=italic ctermfg=NONE ctermbg=NONE
 hi Title cterm=italic ctermfg=NONE ctermbg=NONE
+hi Todo cterm=NONE ctermfg=NONE ctermbg=NONE
 
 " errors
 hi Error cterm=NONE ctermfg=38 ctermbg=NONE
@@ -20,7 +19,6 @@ hi Type cterm=NONE ctermfg=NONE ctermbg=NONE
 hi Special cterm=NONE ctermfg=NONE ctermbg=NONE
 hi Underlined cterm=NONE ctermfg=NONE ctermbg=NONE
 hi Ignore cterm=NONE ctermfg=NONE ctermbg=NONE
-hi Todo cterm=NONE ctermfg=NONE ctermbg=NONE
 
 " statusline
 hi StatusLine cterm=NONE ctermfg=NONE ctermbg=145
