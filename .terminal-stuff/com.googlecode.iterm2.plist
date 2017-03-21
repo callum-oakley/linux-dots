@@ -150,7 +150,7 @@
 	<key>HideTab</key>
 	<false/>
 	<key>HideTabCloseButton</key>
-	<false/>
+	<true/>
 	<key>HideTabNumber</key>
 	<true/>
 	<key>HotkeyMigratedFromSingleToMulti</key>
@@ -202,7 +202,7 @@
 		<integer>1</integer>
 	</dict>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>1509 655 796 473 0 0 2560 1440 </string>
+	<string>560 699 796 473 0 0 2560 1440 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
 	<string>328 812 740 618 0 0 2560 1440 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
@@ -1031,8 +1031,12 @@
 	<false/>
 	<key>ShowNewOutputIndicator</key>
 	<true/>
+	<key>ShowPaneTitles</key>
+	<false/>
 	<key>SplitPaneDimmingAmount</key>
 	<real>0.10000000000000001</real>
+	<key>StretchTabsToFillBar</key>
+	<false/>
 	<key>TerminalMargin</key>
 	<integer>10</integer>
 	<key>TerminalVMargin</key>
