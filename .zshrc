@@ -27,7 +27,7 @@ function vin() {
 
 autoload -U promptinit
 promptinit
-RPROMPT="%{`tput sitm`%}%T%{`tput ritm`%}"
+RPROMPT="%{`tput sitm`%}%D{%H:%M}%{`tput ritm`%}"
 
 # Commands for the current directory to display in title
 precmd () {print -Pn "\e]2; %1/ \a"}
