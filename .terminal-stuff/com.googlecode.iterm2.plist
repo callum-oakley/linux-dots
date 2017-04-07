@@ -61,10 +61,24 @@
 			<key>Text</key>
 			<string></string>
 		</dict>
+		<key>0xf700-0x3a0000</key>
+		<dict>
+			<key>Action</key>
+			<integer>55</integer>
+			<key>Text</key>
+			<string></string>
+		</dict>
 		<key>0xf701-0x300000</key>
 		<dict>
 			<key>Action</key>
 			<integer>6</integer>
+			<key>Text</key>
+			<string></string>
+		</dict>
+		<key>0xf701-0x3a0000</key>
+		<dict>
+			<key>Action</key>
+			<integer>56</integer>
 			<key>Text</key>
 			<string></string>
 		</dict>
@@ -82,6 +96,13 @@
 			<key>Text</key>
 			<string></string>
 		</dict>
+		<key>0xf702-0x3a0000</key>
+		<dict>
+			<key>Action</key>
+			<integer>53</integer>
+			<key>Text</key>
+			<string></string>
+		</dict>
 		<key>0xf703-0x300000</key>
 		<dict>
 			<key>Action</key>
@@ -93,6 +114,13 @@
 		<dict>
 			<key>Action</key>
 			<integer>34</integer>
+			<key>Text</key>
+			<string></string>
+		</dict>
+		<key>0xf703-0x3a0000</key>
+		<dict>
+			<key>Action</key>
+			<integer>54</integer>
 			<key>Text</key>
 			<string></string>
 		</dict>
@@ -202,11 +230,13 @@
 		<integer>1</integer>
 	</dict>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>560 699 796 473 0 0 2560 1440 </string>
+	<string>560 899 958 433 0 0 2560 1440 </string>
+	<key>NSWindow Frame UKCrashReporter</key>
+	<string>230 856 592 584 0 0 2560 1440 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>328 812 740 618 0 0 2560 1440 </string>
+	<string>36 40 2488 1364 0 0 2560 1440 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>10 14 625 776 0 0 1280 800 </string>
+	<string>40 44 800 1356 0 0 2560 1440 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
 	<string>10 14 625 383 0 0 1280 800 </string>
 	<key>NSWindow Frame iTerm Window 3</key>
@@ -1022,7 +1052,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2017-03-21T10:14:52Z</date>
+	<date>2017-04-03T10:05:05Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>ShowBookmarkName</key>
@@ -1041,6 +1071,8 @@
 	<integer>10</integer>
 	<key>TerminalVMargin</key>
 	<integer>10</integer>
+	<key>UKCrashReporterLastCrashReportDate</key>
+	<real>1491213952</real>
 	<key>UseBorder</key>
 	<false/>
 	<key>WindowNumber</key>
