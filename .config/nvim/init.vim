@@ -78,6 +78,8 @@ nnoremap <leader>s :w<cr>
 nnoremap <leader>t <nop>
 nnoremap <leader>t2 :set shiftwidth=2<cr>:set tabstop=2<cr>
 nnoremap <leader>t4 :set shiftwidth=4<cr>:set tabstop=4<cr>
+nnoremap <leader>te :set expandtab<cr>
+nnoremap <leader>tn :set noexpandtab<cr>
 nnoremap <leader>w :bd<cr>
 nnoremap <leader>y "*y
 nnoremap K "_D
