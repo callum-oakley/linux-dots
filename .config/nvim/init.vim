@@ -2,6 +2,7 @@ call plug#begin('~/.config/nvim/plugged')
 Plug 'tpope/vim-surround'
 Plug 'jiangmiao/auto-pairs'
 Plug 'rust-lang/rust.vim'
+Plug 'fatih/vim-go'
 call plug#end()
 
 set breakindent
