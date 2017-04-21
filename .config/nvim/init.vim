@@ -19,6 +19,9 @@ set shiftwidth=2
 set smarttab
 set tabstop=2
 
+" filetype specific settings
+autocmd FileType go setlocal tabstop=4 listchars=trail:·
+
 " hilighting
 syntax on
 set syntax=plain
