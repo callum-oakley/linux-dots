@@ -20,7 +20,7 @@ set smarttab
 set tabstop=2
 
 " filetype specific settings
-autocmd FileType go setlocal tabstop=4 listchars=trail:·
+autocmd FileType go setlocal tabstop=4 listchars=tab:\ \ ,trail:·
 
 " hilighting
 syntax on
