@@ -73,6 +73,7 @@ nnoremap <leader>ak :%d_<cr>
 nnoremap <leader>ay :%y*<cr>
 nnoremap <leader>b :b 
 nnoremap <leader>e :e 
+nnoremap <leader>g* g*N
 nnoremap <leader>l :ls<cr>
 nnoremap <leader>n :bn<cr>
 nnoremap <leader>o o<esc>O
