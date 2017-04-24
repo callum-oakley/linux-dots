@@ -53,6 +53,6 @@ export KEYTIMEOUT=1
 
 export VISUAL=nvim
 export EDITOR="$VISUAL"
-export GOPATH=$HOME/work/go
+export GOPATH=$HOME/code/go
 export PATH=/Users/callum/.cargo/bin:/Users/callum/.local/bin:$GOPATH/bin:$PATH
 
