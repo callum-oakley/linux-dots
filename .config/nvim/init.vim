@@ -43,8 +43,8 @@ vnoremap <silent> # :<C-U>
 " keymaps
 inoremap <home> <esc>I
 nmap j ys
-nnoremap <PageDown> 7+zz
-nnoremap <PageUp> 7-zz
+nnoremap <PageDown> 9+zz
+nnoremap <PageUp> 9-zz
 nnoremap <c-down> :m+<cr>
 nnoremap <c-left> <<
 nnoremap <c-right> >>
