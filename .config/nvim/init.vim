@@ -1,17 +1,18 @@
 call plug#begin('~/.config/nvim/plugged')
-Plug 'tpope/vim-surround'
+Plug 'fatih/vim-go'
 Plug 'jiangmiao/auto-pairs'
 Plug 'rust-lang/rust.vim'
-Plug 'fatih/vim-go'
+Plug 'tpope/vim-surround'
 call plug#end()
 
 set breakindent
 set linebreak
-set relativenumber
-set ruler
-set showcmd
 set list
 set listchars=tab:▸·,trail:·
+set relativenumber
+set ruler
+set scrolloff=99
+set showcmd
 
 " tabs
 set expandtab
@@ -43,8 +44,8 @@ vnoremap <silent> # :<C-U>
 " keymaps
 inoremap <home> <esc>I
 nmap j ys
-nnoremap <PageDown> 9+zz
-nnoremap <PageUp> 9-zz
+nnoremap <PageDown> 9+
+nnoremap <PageUp> 9-
 nnoremap <c-down> :m+<cr>
 nnoremap <c-left> <<
 nnoremap <c-right> >>
