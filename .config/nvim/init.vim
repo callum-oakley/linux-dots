@@ -6,6 +6,7 @@ Plug 'tpope/vim-surround'
 call plug#end()
 
 set breakindent
+set guicursor=n-v-c-sm:block,i-ci-ve-r-cr-o:hor20
 set linebreak
 set list
 set listchars=tab:▸·,trail:·
