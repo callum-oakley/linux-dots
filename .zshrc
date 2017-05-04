@@ -25,6 +25,30 @@ function vin() {
   vi ~/notes/$1.md
 }
 
+function ta() {
+  echo "[${2:+#}$2"#`date +%F#%R#`] $1"\n`cat ~/notes/.t`" > ~/notes/.t
+}
+
+function tl() {
+  cat ~/notes/.t
+}
+
+function tf() {
+  grep -i "${2+#}$1#"
+}
+
+function tc() {
+  cut -d ' ' -f 2-
+}
+
+function tt() {
+  tl | tf $1 | tf $2 | tf $3 | tf $4 | tf $5 | tf $6 | tf $7 | tf $8 | tc
+}
+
+function tv() {
+  vi ~/notes/.t
+}
+
 autoload -U promptinit
 promptinit
 RPROMPT="%{`tput sitm`%}%D{%H:%M}%{`tput ritm`%}"
