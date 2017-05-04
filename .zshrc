@@ -26,7 +26,11 @@ function vin() {
 }
 
 function ta() {
-  echo "[${2:+#}$2"#`date +%F#%R#`] $1"\n`cat ~/notes/.t`" > ~/notes/.t
+  echo "[${2:+#}$2"#`date +%F#%R#`] $1 >> ~/notes/.t
+}
+
+function tat() {
+  echo "[#todo${2:+#}$2"#`date +%F#%R#`] $1 >> ~/notes/.t
 }
 
 function tl() {
@@ -41,8 +45,12 @@ function tc() {
   cut -d ' ' -f 2-
 }
 
-function tt() {
+function t() {
   tl | tf $1 | tf $2 | tf $3 | tf $4 | tf $5 | tf $6 | tf $7 | tf $8 | tc
+}
+
+function tt() {
+  tl | tf todo | tf $1 | tf $2 | tf $3 | tf $4 | tf $5 | tf $6 | tf $7 | tc
 }
 
 function tv() {
