@@ -7,6 +7,7 @@ call plug#end()
 
 set breakindent
 set guicursor=n-v-c-sm:block,i-ci-ve-r-cr-o:hor20
+set ignorecase
 set linebreak
 set list
 set listchars=tab:▸·,trail:·
@@ -14,6 +15,7 @@ set relativenumber
 set ruler
 set scrolloff=99
 set showcmd
+set smartcase
 
 " tabs
 set expandtab
