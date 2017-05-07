@@ -17,45 +17,12 @@ colors
 autoload -U zmv
 
 alias mmv="noglob zmv -W"
+alias n="notes"
+alias pi="pip3"
+alias py="python3"
 alias sed="gsed"
 alias vi="nvim"
 alias vim="nvim"
-
-function vin() {
-  vi ~/notes/$1.md
-}
-
-function ta() {
-  echo "[${2:+#}$2"#`date +%F#%R#`] $1 >> ~/notes/.t
-}
-
-function tat() {
-  echo "[#todo${2:+#}$2"#`date +%F#%R#`] $1 >> ~/notes/.t
-}
-
-function tl() {
-  cat ~/notes/.t
-}
-
-function tf() {
-  grep -i "${2+#}$1#"
-}
-
-function tc() {
-  cut -d ' ' -f 2-
-}
-
-function t() {
-  tl | tf $1 | tf $2 | tf $3 | tf $4 | tf $5 | tf $6 | tf $7 | tf $8 | tc
-}
-
-function tt() {
-  tl | tf todo | tf $1 | tf $2 | tf $3 | tf $4 | tf $5 | tf $6 | tf $7 | tc
-}
-
-function tv() {
-  vi ~/notes/.t
-}
 
 autoload -U promptinit
 promptinit
