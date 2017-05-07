@@ -17,7 +17,6 @@ colors
 autoload -U zmv
 
 alias mmv="noglob zmv -W"
-alias n="notes"
 alias pi="pip3"
 alias py="python3"
 alias sed="gsed"
