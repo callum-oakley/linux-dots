@@ -4,7 +4,6 @@ HISTFILE=~/.histfile
 HISTSIZE=1000
 SAVEHIST=1000
 setopt autocd
-bindkey -e
 # End of lines configured by zsh-newuser-install
 
 autoload -Uz compinit promptinit
@@ -52,5 +51,5 @@ export KEYTIMEOUT=1
 export VISUAL=nvim
 export EDITOR="$VISUAL"
 export GOPATH=$HOME/code/go
+export PASSWORD_STORE_DIR="$HOME/Dropbox/.password-store"
 export PATH=/Users/callum/.cargo/bin:/Users/callum/.local/bin:$GOPATH/bin:$PATH
-
