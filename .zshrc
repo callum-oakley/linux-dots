@@ -48,7 +48,7 @@ zle -N zle-line-init
 zle -N zle-keymap-select
 export KEYTIMEOUT=1
 
-export KUBECONFIG=cubeconfig
+export KUBECONFIG=kubeconfig
 export VISUAL=nvim
 export EDITOR="$VISUAL"
 export GOPATH=$HOME/code/go
