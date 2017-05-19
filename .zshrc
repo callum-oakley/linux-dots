@@ -56,3 +56,4 @@ export EDITOR="$VISUAL"
 export GOPATH=$HOME/code/go
 export PASSWORD_STORE_DIR="$HOME/Dropbox/.password-store"
 export PATH=/Users/callum/.cargo/bin:/Users/callum/.local/bin:$GOPATH/bin:$PATH
+source ~/.export-secrets
