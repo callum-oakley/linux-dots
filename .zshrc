@@ -46,8 +46,10 @@ function zle-line-init zle-keymap-select {
 
 zle -N zle-line-init
 zle -N zle-keymap-select
-export KEYTIMEOUT=1
 
+source <(kubectl completion zsh)
+
+export KEYTIMEOUT=1
 export KUBECONFIG=kubeconfig
 export VISUAL=nvim
 export EDITOR="$VISUAL"
