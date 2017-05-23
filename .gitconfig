@@ -8,3 +8,6 @@
 [alias]
     graph = log --graph --decorate --oneline
     ignore = "!gi() { curl -L -s https://www.gitignore.io/api/$@ ;}; gi"
+
+[url "https://github.com/"]
+    insteadOf = "git@github.com:"
