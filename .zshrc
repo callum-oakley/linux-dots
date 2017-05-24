@@ -21,6 +21,7 @@ alias py="python3"
 alias sed="gsed"
 alias vi="nvim"
 alias vim="nvim"
+alias kc="kubectl"
 
 autoload -U promptinit
 promptinit
