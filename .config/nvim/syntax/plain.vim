@@ -1,5 +1,5 @@
 syntax clear
-hi LineNr cterm=NONE ctermfg=15 ctermbg=NONE
+hi LineNr cterm=NONE ctermfg=7 ctermbg=NONE
 hi CursorLineNr cterm=NONE ctermfg=38 ctermbg=NONE
 
 " italics
@@ -8,7 +8,7 @@ hi Title cterm=italic ctermfg=NONE ctermbg=NONE
 hi Todo cterm=NONE ctermfg=NONE ctermbg=NONE
 
 " errors
-hi Error cterm=NONE ctermfg=38 ctermbg=NONE
+hi Error cterm=NONE ctermfg=1 ctermbg=NONE
 
 " plain
 hi Constant cterm=NONE ctermfg=NONE ctermbg=NONE
