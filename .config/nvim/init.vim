@@ -59,15 +59,9 @@ nnoremap <esc> :noh<cr><esc>
 nnoremap <home> ^
 nnoremap <leader> <nop>
 nnoremap <leader>* *N
-nnoremap <leader><c-down> :below sp<cr>
-nnoremap <leader><c-left> :above vsp<cr>
-nnoremap <leader><c-right> :below vsp<cr>
-nnoremap <leader><c-up> :above sp<cr>
-nnoremap <leader><down> <c-w><c-j>
-nnoremap <leader><left> <c-w><c-h>
-nnoremap <leader><right> <c-w><c-l>
+nnoremap <leader><c-down> ddGp
+nnoremap <leader><c-up> ddggP
 nnoremap <leader><tab> :b#<cr>
-nnoremap <leader><up> <c-w><c-k>
 nnoremap <leader>= <c-w>=
 nnoremap <leader>N :bp<cr>
 nnoremap <leader>O O<esc>O
