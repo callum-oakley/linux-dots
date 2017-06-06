@@ -3,7 +3,7 @@
     email = callum@pusher.com
 
 [push]
-    default = simple
+	default = current
 
 [alias]
     graph = log --graph --decorate --oneline
