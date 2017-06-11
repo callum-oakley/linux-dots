@@ -5,6 +5,7 @@ Plug 'leafgarland/typescript-vim'
 Plug 'pangloss/vim-javascript'
 Plug 'rust-lang/rust.vim'
 Plug 'tpope/vim-surround'
+Plug 'wellle/targets.vim'
 call plug#end()
 
 set breakindent
