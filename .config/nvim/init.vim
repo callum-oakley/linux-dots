@@ -95,12 +95,9 @@ nnoremap h cgN
 nnoremap k "_d
 nnoremap kk "_dd
 nnoremap l cgn
-tnoremap <c-down> <c-\><c-n><c-w><c-j>
-tnoremap <c-left> <c-\><c-n><c-w><c-h>
-tnoremap <c-right> <c-\><c-n><c-w><c-l>
-tnoremap <c-up> <c-\><c-n><c-w><c-k>
-tnoremap <esc> <c-\><c-n>
 vmap <leader>* *N
+vnoremap <PageDown> 9<down>
+vnoremap <PageUp> 9<up>
 vnoremap <cr> :
 vnoremap <home> ^
 vnoremap <leader>y "*y
