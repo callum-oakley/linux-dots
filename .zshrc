@@ -27,9 +27,14 @@ RPROMPT="%{`tput sitm`%}%D{%H:%M}%{`tput ritm`%}"
 precmd () {print -Pn "\e]2; %1/ \a"}
 preexec () {print -Pn "\e]2; %1/ \a"}
 
+# enable full screen editing
+autoload edit-command-line
+zle -N edit-command-line
+
 # zsh vi bindings config
 bindkey -v
 bindkey "^R" history-incremental-search-backward
+bindkey -M vicmd v edit-command-line
 
 function zle-line-init zle-keymap-select {
   if [[ $KEYMAP == vicmd ]]; then
