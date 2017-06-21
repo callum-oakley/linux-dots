@@ -1,0 +1,2 @@
+:set prompt "\n\ESC[37m\STX> \ESC[m\STX"
+:set prompt2 "\ESC[37m\STX> \ESC[m\STX"
