@@ -1,6 +1,8 @@
 HISTFILE=~/.histfile
-HISTSIZE=1000
-SAVEHIST=1000
+HISTSIZE=1000000
+SAVEHIST=1000000
+
+setopt SHARE_HISTORY
 
 autoload -Uz compinit promptinit
 compinit
