@@ -53,6 +53,12 @@ zle -N zle-keymap-select
 
 source <(kubectl completion zsh)
 
+# brew install zsh-history-substring-search
+source /usr/local/share/zsh-history-substring-search/zsh-history-substring-search.zsh
+
+bindkey '^[[A' history-substring-search-up
+bindkey '^[[B' history-substring-search-down
+
 export KEYTIMEOUT=1
 export KUBECONFIG=kubeconfig
 export VISUAL=nvim
