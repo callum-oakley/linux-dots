@@ -59,6 +59,8 @@ source /usr/local/share/zsh-history-substring-search/zsh-history-substring-searc
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
 
+export HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_FOUND='fg=green'
+export HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_NOT_FOUND='fg=red'
 export KEYTIMEOUT=1
 export KUBECONFIG=kubeconfig
 export VISUAL=nvim
