@@ -1,4 +1,5 @@
 call plug#begin('~/.config/nvim/plugged')
+Plug 'ctrlpvim/ctrlp.vim'
 Plug 'fatih/vim-go'
 Plug 'jiangmiao/auto-pairs'
 Plug 'leafgarland/typescript-vim'
@@ -73,8 +74,7 @@ nnoremap <leader>a <nop>
 nnoremap <leader>ad :%d*<cr>
 nnoremap <leader>ak :%d_<cr>
 nnoremap <leader>ay :%y*<cr>
-nnoremap <leader>b :b 
-nnoremap <leader>e :e 
+nnoremap <leader>e :CtrlP<cr>
 nnoremap <leader>g* g*N
 nnoremap <leader>l :ls<cr>
 nnoremap <leader>n :bn<cr>
