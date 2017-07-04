@@ -49,6 +49,8 @@ vnoremap <silent> # :<C-U>
   \escape(@", '?\.*$^~['), '\_s\+', '\\_s\\+', 'g')<CR><CR>
   \gV:call setreg('"', old_reg, old_regtype)<CR><Paste>
 
+let g:ctrlp_working_path_mode = 'c'
+
 " keymaps
 inoremap <home> <esc>I
 nmap j ys
@@ -67,6 +69,7 @@ nnoremap <leader><c-down> ddGp
 nnoremap <leader><c-up> ddggP
 nnoremap <leader><tab> :b#<cr>
 nnoremap <leader>= <c-w>=
+nnoremap <leader>E :e 
 nnoremap <leader>N :bp<cr>
 nnoremap <leader>O O<esc>O
 nnoremap <leader>P "*P
@@ -74,6 +77,7 @@ nnoremap <leader>a <nop>
 nnoremap <leader>ad :%d*<cr>
 nnoremap <leader>ak :%d_<cr>
 nnoremap <leader>ay :%y*<cr>
+nnoremap <leader>b :b 
 nnoremap <leader>e :CtrlP<cr>
 nnoremap <leader>g* g*N
 nnoremap <leader>l :ls<cr>
