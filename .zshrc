@@ -27,8 +27,8 @@ promptinit
 RPROMPT="%{`tput sitm`%}%D{%H:%M}%{`tput ritm`%}"
 
 # Commands for the current directory to display in title
-precmd () {print -Pn "\e]2; %1/ \a"}
-preexec () {print -Pn "\e]2; %1/ \a"}
+precmd () {print -Pn "\e]0; %1/ \a"}
+preexec () {print -Pn "\e]0; %1/ \a"}
 
 # enable full screen editing
 autoload edit-command-line
