@@ -3,6 +3,7 @@ HISTSIZE=1000000
 SAVEHIST=1000000
 
 setopt SHARE_HISTORY
+setopt HIST_IGNORE_ALL_DUPS
 setopt INTERACTIVECOMMENTS
 
 autoload -Uz compinit promptinit
@@ -62,6 +63,7 @@ bindkey '^[[B' history-substring-search-down
 
 export HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_FOUND='fg=green'
 export HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_NOT_FOUND='fg=red'
+export HISTORY_SUBSTRING_SEARCH_FUZZY=1
 export KEYTIMEOUT=1
 export KUBECONFIG=kubeconfig
 export VISUAL=nvim
