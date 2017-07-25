@@ -8,7 +8,7 @@ BASE16_SHELL=$HOME/.config/base16-shell/
 setopt SHARE_HISTORY
 setopt HIST_IGNORE_ALL_DUPS
 setopt INTERACTIVECOMMENTS
-setopt PROMPT_SUBST
+setopt prompt_subst
 
 autoload -Uz compinit promptinit
 compinit
@@ -29,9 +29,7 @@ alias kc="kubectl"
 
 source ~/.git-prompt.sh
 
-autoload -U promptinit
-promptinit
-RPROMPT="%F{red}$(__git_ps1 "%s")%f"
+RPROMPT='%F{red}$(__git_ps1 "%s")%f'
 
 # Commands for the current directory to display in title
 precmd () {print -Pn "\e]0; %1/ \a"}
