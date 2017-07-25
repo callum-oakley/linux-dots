@@ -71015,7 +71015,9 @@
 	<key>Default Bookmark Guid</key>
 	<string>35B52ED3-7EB9-45CC-BCD2-080627820ADE</string>
 	<key>DimBackgroundWindows</key>
-	<true/>
+	<false/>
+	<key>DimInactiveSplitPanes</key>
+	<false/>
 	<key>DimOnlyText</key>
 	<false/>
 	<key>DisableFullscreenTransparency</key>
@@ -71273,15 +71275,15 @@
 	<key>NSWindow Frame SessionsPreferences</key>
 	<string>220 120 606 469 0 0 1680 1050 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>134 1010 918 381 0 0 2560 1440 </string>
+	<string>134 962 796 473 0 0 2560 1440 </string>
 	<key>NSWindow Frame com.apple.typography_panel_Nitti-Light</key>
 	<string>477 157 260 494 0 0 2560 1440 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>867 24 827 1396 0 0 2560 1440 </string>
+	<string>1713 24 827 1396 0 0 2560 1440 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>1713 24 827 1396 0 0 2560 1440 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
-	<string>1290 24 1250 1396 0 0 2560 1440 </string>
+	<string>20 24 827 1396 0 0 2560 1440 </string>
 	<key>NSWindow Frame iTerm Window 3</key>
 	<string>460 759 740 641 0 0 2560 1440 </string>
 	<key>New Bookmarks</key>
@@ -72045,7 +72047,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2017-07-23T11:42:48Z</date>
+	<date>2017-07-25T19:09:50Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>ShowBookmarkName</key>
@@ -72057,9 +72059,11 @@
 	<key>ShowPaneTitles</key>
 	<false/>
 	<key>SplitPaneDimmingAmount</key>
-	<real>0.24182692307692313</real>
+	<real>0.59999999999999998</real>
 	<key>StretchTabsToFillBar</key>
 	<true/>
+	<key>TabStyle</key>
+	<integer>0</integer>
 	<key>TerminalMargin</key>
 	<integer>10</integer>
 	<key>TerminalVMargin</key>

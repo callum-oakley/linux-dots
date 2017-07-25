@@ -1,6 +1,7 @@
 call plug#begin('~/.config/nvim/plugged')
 Plug 'chriskempson/base16-vim'
 Plug 'ctrlpvim/ctrlp.vim'
+Plug 'ervandew/supertab'
 Plug 'fatih/vim-go'
 Plug 'jiangmiao/auto-pairs'
 Plug 'leafgarland/typescript-vim'
@@ -8,6 +9,7 @@ Plug 'mxw/vim-jsx'
 Plug 'neovimhaskell/haskell-vim'
 Plug 'pangloss/vim-javascript'
 Plug 'rust-lang/rust.vim'
+Plug 'shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'tpope/vim-surround'
 Plug 'tsiemens/vim-aftercolors'
 Plug 'wellle/targets.vim'
@@ -59,6 +61,7 @@ vnoremap <silent> # :<C-U>
 " plugin options
 let g:ctrlp_working_path_mode = 'c'
 let g:jsx_ext_required = 0
+let g:deoplete#enable_at_startup = 1
 
 " keymaps
 inoremap <home> <esc>I

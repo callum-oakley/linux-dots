@@ -5,10 +5,10 @@ SAVEHIST=1000000
 BASE16_SHELL=$HOME/.config/base16-shell/
 [ -n "$PS1" ] && [ -s $BASE16_SHELL/profile_helper.sh ] && eval "$($BASE16_SHELL/profile_helper.sh)"
 
-setopt SHARE_HISTORY
 setopt HIST_IGNORE_ALL_DUPS
 setopt INTERACTIVECOMMENTS
-setopt prompt_subst
+setopt PROMPT_SUBST
+setopt SHARE_HISTORY
 
 autoload -Uz compinit promptinit
 compinit
