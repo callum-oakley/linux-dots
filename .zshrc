@@ -2,9 +2,13 @@ HISTFILE=~/.histfile
 HISTSIZE=1000000
 SAVEHIST=1000000
 
+BASE16_SHELL=$HOME/.config/base16-shell/
+[ -n "$PS1" ] && [ -s $BASE16_SHELL/profile_helper.sh ] && eval "$($BASE16_SHELL/profile_helper.sh)"
+
 setopt SHARE_HISTORY
 setopt HIST_IGNORE_ALL_DUPS
 setopt INTERACTIVECOMMENTS
+setopt PROMPT_SUBST
 
 autoload -Uz compinit promptinit
 compinit
@@ -23,9 +27,11 @@ alias vi="nvim"
 alias vim="nvim"
 alias kc="kubectl"
 
+source ~/.git-prompt.sh
+
 autoload -U promptinit
 promptinit
-RPROMPT="%{`tput sitm`%}%D{%H:%M}%{`tput ritm`%}"
+RPROMPT="%F{red}$(__git_ps1 "%s")%f"
 
 # Commands for the current directory to display in title
 precmd () {print -Pn "\e]0; %1/ \a"}
@@ -46,7 +52,7 @@ function zle-line-init zle-keymap-select {
   elif [[ $KEYMAP == main ]] || [[ $KEYMAP == viins ]] || [[ $KEYMAP = '' ]]; then
     separator="$"
   fi
-  PROMPT=$'\n'"%{[38;05;38m%}%1/ $separator %{$reset_color%}"
+  PROMPT=$'\n'"%F{red}%1/ $separator %f"
   zle reset-prompt
 }
 

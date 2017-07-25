@@ -1,12 +1,15 @@
 call plug#begin('~/.config/nvim/plugged')
+Plug 'chriskempson/base16-vim'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'fatih/vim-go'
 Plug 'jiangmiao/auto-pairs'
 Plug 'leafgarland/typescript-vim'
 Plug 'mxw/vim-jsx'
+Plug 'neovimhaskell/haskell-vim'
 Plug 'pangloss/vim-javascript'
 Plug 'rust-lang/rust.vim'
 Plug 'tpope/vim-surround'
+Plug 'tsiemens/vim-aftercolors'
 Plug 'wellle/targets.vim'
 call plug#end()
 
@@ -36,7 +39,8 @@ autocmd FileType lhaskell setlocal fo+=ro
 
 " hilighting
 syntax on
-set syntax=plain
+let base16colorspace=256
+colorscheme base16-oceanicnext
 
 let mapleader=" "
 
