@@ -27,7 +27,7 @@ alias vi="nvim"
 alias vim="nvim"
 alias kc="kubectl"
 
-source ~/.git-prompt.sh
+source ~/.config/git-prompt.sh
 
 RPROMPT='%F{red}$(__git_ps1 "%s")%f'
 
