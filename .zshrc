@@ -19,13 +19,14 @@ colors
 
 autoload -U zmv
 
+alias core="vi ~/notes/core"
+alias kc="kubectl"
 alias mmv="noglob zmv -W"
 alias pi="pip3"
 alias py="python3"
 alias sed="gsed"
 alias vi="nvim"
 alias vim="nvim"
-alias kc="kubectl"
 
 source ~/.config/git-prompt.sh
 
