@@ -89,6 +89,7 @@ nnoremap <leader>ay :%y*<cr>
 nnoremap <leader>b :b 
 nnoremap <leader>e :CtrlP<cr>
 nnoremap <leader>f gq
+nnoremap <leader>ff gqq
 nnoremap <leader>g* g*N
 nnoremap <leader>l :ls<cr>
 nnoremap <leader>n :bn<cr>
