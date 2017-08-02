@@ -58,6 +58,7 @@ vnoremap <silent> # :<C-U>
 
 " plugin options
 let g:ctrlp_working_path_mode = 'c'
+let g:haskell_indent_case_alternative = 1
 let g:jsx_ext_required = 0
 
 " keymaps
