@@ -73,5 +73,5 @@ export VISUAL=nvim
 export EDITOR="$VISUAL"
 export GOPATH=$HOME/code/go
 export PASSWORD_STORE_DIR="$HOME/Dropbox/.password-store"
-export PATH=/usr/local/opt/curl/bin:/Users/callum/.cargo/bin:/Users/callum/.local/bin:$GOPATH/bin:/Users/callum/Library/Haskell/bin:$PATH
+export PATH=/usr/local/opt/curl/bin:/Users/callum/.cargo/bin:/Users/callum/.local/bin:$GOPATH/bin:/Users/callum/Library/Haskell/bin:/Users/callum/.cabal/bin:$PATH
 source ~/.export-secrets
