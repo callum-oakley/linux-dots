@@ -1,16 +1,11 @@
 call plug#begin('~/.config/nvim/plugged')
 Plug 'chriskempson/base16-vim'
 Plug 'ctrlpvim/ctrlp.vim'
-Plug 'fatih/vim-go'
 Plug 'jiangmiao/auto-pairs'
-Plug 'leafgarland/typescript-vim'
-Plug 'mxw/vim-jsx'
-Plug 'neovimhaskell/haskell-vim'
-Plug 'pangloss/vim-javascript'
-Plug 'rust-lang/rust.vim'
 Plug 'tpope/vim-surround'
 Plug 'tsiemens/vim-aftercolors'
 Plug 'wellle/targets.vim'
+Plug 'sheerun/vim-polyglot'
 call plug#end()
 
 set breakindent
@@ -67,6 +62,8 @@ let g:haskell_indent_case_alternative = 1
 let g:jsx_ext_required = 0
 
 " keymaps
+nnoremap <leader>ch :hi Comment ctermfg=None<cr>
+nnoremap <leader>cc :hi Comment ctermfg=8<cr>
 inoremap <home> <esc>I
 nmap j ys
 nnoremap <PageDown> 9<down>
