@@ -1,11 +1,12 @@
 call plug#begin('~/.config/nvim/plugged')
 Plug 'chriskempson/base16-vim'
 Plug 'ctrlpvim/ctrlp.vim'
+Plug 'fatih/vim-go'
 Plug 'jiangmiao/auto-pairs'
+Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-surround'
 Plug 'tsiemens/vim-aftercolors'
 Plug 'wellle/targets.vim'
-Plug 'sheerun/vim-polyglot'
 call plug#end()
 
 set breakindent
