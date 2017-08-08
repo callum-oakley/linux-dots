@@ -63,8 +63,6 @@ let g:haskell_indent_case_alternative = 1
 let g:jsx_ext_required = 0
 
 " keymaps
-nnoremap <leader>ch :hi Comment ctermfg=None<cr>
-nnoremap <leader>cc :hi Comment ctermfg=8<cr>
 inoremap <home> <esc>I
 nmap j ys
 nnoremap <PageDown> 9<down>
@@ -91,6 +89,9 @@ nnoremap <leader>ad :%d*<cr>
 nnoremap <leader>ak :%d_<cr>
 nnoremap <leader>ay :%y*<cr>
 nnoremap <leader>b :b 
+nnoremap <leader>cc :hi Comment ctermfg=8<cr>
+nnoremap <leader>ch :hi Comment ctermfg=None<cr>
+nnoremap <leader>d /<<<<<<<\\|=======\\|>>>>>>><cr>
 nnoremap <leader>e :CtrlP<cr>
 nnoremap <leader>f gq
 nnoremap <leader>ff gqq
