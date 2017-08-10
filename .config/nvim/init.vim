@@ -3,6 +3,7 @@ Plug 'chriskempson/base16-vim'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'fatih/vim-go'
 Plug 'jiangmiao/auto-pairs'
+Plug 'pangloss/vim-javascript'
 Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-surround'
 Plug 'tsiemens/vim-aftercolors'
@@ -61,6 +62,7 @@ map <F10> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans
 let g:ctrlp_working_path_mode = 'c'
 let g:haskell_indent_case_alternative = 1
 let g:jsx_ext_required = 0
+let g:javascript_plugin_flow = 1
 
 " keymaps
 inoremap <home> <esc>I
