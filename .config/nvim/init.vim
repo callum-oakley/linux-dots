@@ -12,7 +12,6 @@ call plug#end()
 
 set breakindent
 set guicursor=n-v-c-sm:block,i-ci-ve-r-cr-o:hor20
-set ignorecase
 set linebreak
 set list
 set listchars=tab:▸·,trail:·
@@ -20,7 +19,6 @@ set relativenumber
 set ruler
 set scrolloff=99
 set showcmd
-set smartcase
 set tildeop
 
 " tabs
@@ -98,6 +96,7 @@ nnoremap <leader>e :CtrlP<cr>
 nnoremap <leader>f gq
 nnoremap <leader>ff gqq
 nnoremap <leader>g* g*N
+nnoremap <leader>i /\c
 nnoremap <leader>l :ls<cr>
 nnoremap <leader>n :bn<cr>
 nnoremap <leader>o o<esc>O
