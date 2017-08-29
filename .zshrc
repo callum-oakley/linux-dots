@@ -27,6 +27,7 @@ alias py="python3"
 alias sed="gsed"
 alias vi="nvim"
 alias vim="nvim"
+alias tree="tree -C"
 
 source ~/.config/git-prompt.sh
 
