@@ -1,4 +1,4 @@
-HISTFILE=~/.histfile
+HISTFILE=$HOME/.histfile
 HISTSIZE=1000000
 SAVEHIST=1000000
 
@@ -19,7 +19,7 @@ colors
 
 autoload -U zmv
 
-alias core="vi ~/notes/core"
+alias core="vi $HOME/notes/core"
 alias kc="kubectl"
 alias mmv="noglob zmv -W"
 alias pi="pip3"
@@ -29,7 +29,7 @@ alias vi="nvim"
 alias vim="nvim"
 alias tree="tree -C"
 
-source ~/.config/git-prompt.sh
+source $HOME/.config/git-prompt.sh
 
 RPROMPT='%F{red}$(__git_ps1 "%s")%f'
 
@@ -59,8 +59,7 @@ function zle-line-init zle-keymap-select {
 zle -N zle-line-init
 zle -N zle-keymap-select
 
-# brew install zsh-history-substring-search
-source /usr/local/share/zsh-history-substring-search/zsh-history-substring-search.zsh
+source $HOME/bin/zsh-history-substring-search.zsh
 
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
@@ -75,4 +74,4 @@ export EDITOR="$VISUAL"
 export GOPATH=$HOME/code/go
 export PASSWORD_STORE_DIR="$HOME/Dropbox/.password-store"
 export PATH=/usr/local/opt/curl/bin:/Users/callum/.cargo/bin:/Users/callum/.local/bin:$GOPATH/bin:/Users/callum/Library/Haskell/bin:/Users/callum/.cabal/bin:$PATH
-source ~/.export-secrets
+source $HOME/.export-secrets
