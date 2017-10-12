@@ -1,7 +1,7 @@
 # System
-super + ctrl + alt + r
+super + alt + ctrl + r
   reboot
-super + ctrl + alt + s
+super + alt + ctrl + s
   shutdown -h now
 super + r
   pkill -USR1 -x sxhkd
@@ -16,7 +16,6 @@ super + s
 super + i
   urxvt -e htop &; sleep 0.1; waitron window_snap middle
 
-
 # Media
 XF86AudioRaiseVolume
   amixer set Master 5%+
@@ -30,6 +29,10 @@ XF86AudioNext
   playerctl next
 XF86AudioPrev
   playerctl previous
+
+# Backlight
+super + ctrl + {Up,Down}
+  xbacklight -{inc,dec} 5
 
 # Screenshots
 super + z
