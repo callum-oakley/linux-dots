@@ -118,7 +118,7 @@ Give sudo access to members of `wheel`
 
 and then log out and back in again as `callum`
 
-Install all the things.
+Install the basics (see `.config/pacman-Qqe` for everything else).
 
     $ pacman -S base-devel git htop neovim pass tree xorg xorg-xinit alsa-utils ripgrep dkms broadcom-wl-dkms
 
@@ -137,9 +137,25 @@ Bootstrap `cower`
     $ cd cower
     $ makepkg -si
 
+Stop immediate wakeup from suspend with the following systemd unit in
+`/usr/lib/systemd/system/suppress-lid-wakeup.service`.
+
+    [Unit]
+    Description=Disable wakeup from LID0 in /proc/acpi/wakeup
+
+    [Service]
+    Type=oneshot
+    ExecStart=/bin/sh -c 'echo LID0 > /proc/acpi/wakeup'
+    ExecStop=/bin/sh -c 'echo LID0 > /proc/acpi/wakeup'
+    RemainAfterExit=yes
+
+    [Install]
+    WantedBy=multi-user.target
+
 ## Useful links
-https://wiki.archlinux.org/index.php/installation_guide
-https://wiki.archlinux.org/index.php/Dm-crypt/Encrypting_an_entire_system
-https://wiki.archlinux.org/index.php/GRUB
-https://wiki.archlinux.org/index.php/EFI_System_Partition
-https://www.mankier.com/1/nmtui
+
+- https://wiki.archlinux.org/index.php/installation_guide
+- https://wiki.archlinux.org/index.php/Dm-crypt/Encrypting_an_entire_system
+- https://wiki.archlinux.org/index.php/GRUB
+- https://wiki.archlinux.org/index.php/EFI_System_Partition
+- https://www.mankier.com/1/nmtui
