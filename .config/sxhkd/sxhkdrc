@@ -1,0 +1,106 @@
+# System
+super + ctrl + alt + r
+  reboot
+super + ctrl + alt + s
+  shutdown -h now
+super + r
+  pkill -USR1 -x sxhkd
+super + w
+  waitron window_close
+super + q
+  waitron wm_quit 0
+super + l
+  lock
+super + s
+  lock && systemctl suspend
+super + i
+  urxvt -e htop &; sleep 0.1; waitron window_snap middle
+
+
+# Media
+XF86AudioRaiseVolume
+  amixer set Master 5%+
+XF86AudioLowerVolume
+  amixer set Master 5%-
+XF86AudioMute
+  amixer set Master toggle
+XF86AudioPlay
+  playerctl play-pause
+XF86AudioNext
+  playerctl next
+XF86AudioPrev
+  playerctl previous
+
+# Screenshots
+super + z
+  scrot -e 'mv $f ~/Desktop/'
+super + shift + z
+  sleep 0.2; scrot -e 'mv $f ~/Desktop/' -s
+
+# Applications
+super + ctrl + Return
+  urxvt
+super + ctrl + shift + Return
+  firefox-developer
+super + ctrl + s
+  spotify
+# (TODO handle this automatically)
+super + ctrl + shift + s
+  spotify --force-device-scale-factor=1.5
+
+# Group management
+super + {0-9}
+  waitron group_toggle {0-9}
+super + shift + {0-9}
+  waitron group_add_window {0-9}
+super + ctrl + {0-9}
+  waitron group_activate_specific {0-9}
+
+# Move windows
+super + c
+  waitron window_snap middle
+super + {Home,End,Next,Prior}
+  waitron window_snap {topleft,topright,bottomleft,bottomright}
+super + {Up,Down,Left,Right}
+  waitron window_move {0 -20, 0 20, -20 0, 20 0}
+super + shift + {Up,Down,Left,Right}
+  waitron window_move {0 -60, 0 60, -60 0, 60 0}
+
+# Size windows
+super + ctrl + shift + 1
+  waitron window_resize_absolute $WINDOW_WIDTH_1 $WINDOW_HEIGHT_FULL ;\
+  waitron window_snap middle
+super + ctrl + shift + 2
+  waitron window_resize_absolute $WINDOW_WIDTH_2 $WINDOW_HEIGHT_FULL ;\
+  waitron window_snap middle
+super + ctrl + shift + 3
+  waitron window_resize_absolute $WINDOW_WIDTH_3 $WINDOW_HEIGHT_FULL ;\
+  waitron window_snap middle
+super + ctrl + shift + 4
+  waitron window_resize_absolute $WINDOW_WIDTH_1 $WINDOW_HEIGHT_HALF ;\
+  waitron window_snap middle
+super + ctrl + shift + 5
+  waitron window_resize_absolute $WINDOW_WIDTH_2 $WINDOW_HEIGHT_HALF ;\
+  waitron window_snap middle
+super + m
+  waitron window_monocle
+super + f
+  waitron window_maximize
+super + v
+  waitron window_ver_maximize
+super + alt + {Up,Down,Left,Right}
+  waitron window_resize {0 -20, 0 20, -20 0, 20 0}
+super + alt + shift + {Up,Down,Left,Right}
+  waitron window_resize {0 -60, 0 60, -60 0, 60 0}
+
+# Focus windows
+super + BackSpace
+  waitron window_focus_last
+super + ctrl + {Left,Right}
+  waitron window_cardinal_focus {left,right}
+super + ctrl + shift + {Left,Right}
+  waitron window_cardinal_focus {down,up}
+super + Tab
+  waitron window_cycle
+super + shift + Tab
+  waitron window_rev_cycle

@@ -67,10 +67,10 @@ inoremap <home> <esc>I
 nmap j ys
 nnoremap <PageDown> 9<down>
 nnoremap <PageUp> 9<up>
-nnoremap <c-down> :m+<cr>
-nnoremap <c-left> <<
-nnoremap <c-right> >>
-nnoremap <c-up> :m--<cr>
+nnoremap <c-e> :m+<cr>
+nnoremap <c-i> >>
+nnoremap <c-n> <<
+nnoremap <c-u> :m--<cr>
 nnoremap <cr> :
 nnoremap <esc> :noh<cr><esc>
 nnoremap <home> ^
@@ -83,11 +83,11 @@ nnoremap <leader>= <c-w>=
 nnoremap <leader>E :e 
 nnoremap <leader>N :bp<cr>
 nnoremap <leader>O O<esc>O
-nnoremap <leader>P "*P
+nnoremap <leader>P "+P
 nnoremap <leader>a <nop>
-nnoremap <leader>ad :%d*<cr>
+nnoremap <leader>ad :%d+<cr>
 nnoremap <leader>ak :%d_<cr>
-nnoremap <leader>ay :%y*<cr>
+nnoremap <leader>ay :%y+<cr>
 nnoremap <leader>b :b 
 nnoremap <leader>cc :hi Comment ctermfg=8<cr>
 nnoremap <leader>ch :hi Comment ctermfg=None<cr>
@@ -100,7 +100,7 @@ nnoremap <leader>i /\c
 nnoremap <leader>l :ls<cr>
 nnoremap <leader>n :bn<cr>
 nnoremap <leader>o o<esc>O
-nnoremap <leader>p "*p
+nnoremap <leader>p "+p
 nnoremap <leader>q :q<cr>
 nnoremap <leader>s :w<cr>
 nnoremap <leader>t <nop>
@@ -110,8 +110,9 @@ nnoremap <leader>te :set expandtab<cr>
 nnoremap <leader>tn :set noexpandtab<cr>
 nnoremap <leader>v <c-v>
 nnoremap <leader>w :bd<cr>
-nnoremap <leader>y "*y
+nnoremap <leader>y "+y
 nnoremap K "_D
+nnoremap U <c-r>
 nnoremap Y y$
 nnoremap h cgN
 nnoremap k "_d
@@ -123,6 +124,6 @@ vnoremap <PageDown> 9<down>
 vnoremap <PageUp> 9<up>
 vnoremap <cr> :
 vnoremap <home> ^
-vnoremap <leader>y "*y
+vnoremap <leader>y "+y
 vnoremap k "_d
 vnoremap kk "_dd

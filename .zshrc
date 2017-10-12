@@ -19,23 +19,20 @@ colors
 
 autoload -U zmv
 
-alias core="vi $HOME/notes/core"
-alias kc="kubectl"
-alias mmv="noglob zmv -W"
-alias pi="pip3"
-alias py="python3"
-alias sed="gsed"
-alias vi="nvim"
-alias vim="nvim"
-alias tree="tree -C"
+alias ff='firefox-developer'
+alias ghci='stack ghci'
+alias kc='kubectl'
+alias ls='ls --color=auto'
+alias lwd='cd $(cat $HOME/.wd)'
+alias mmv='noglob zmv -W'
+alias swd='pwd > $HOME/.wd'
+alias tree='tree -C'
+alias vi='nvim'
+alias vim='nvim'
 
 source $HOME/.config/git-prompt.sh
 
 RPROMPT='%F{red}$(__git_ps1 "%s")%f'
-
-# Commands for the current directory to display in title
-precmd () {print -Pn "\e]0; %1/ \a"}
-preexec () {print -Pn "\e]0; %1/ \a"}
 
 # enable full screen editing
 autoload edit-command-line
@@ -43,7 +40,6 @@ zle -N edit-command-line
 
 # zsh vi bindings config
 bindkey -v
-bindkey "^R" history-incremental-search-backward
 bindkey -M vicmd v edit-command-line
 
 function zle-line-init zle-keymap-select {
@@ -68,10 +64,15 @@ export HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_FOUND='fg=green'
 export HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_NOT_FOUND='fg=red'
 export HISTORY_SUBSTRING_SEARCH_FUZZY=1
 export KEYTIMEOUT=1
-export KUBECONFIG=kubeconfig
-export VISUAL=nvim
+export KUBECONFIG='kubeconfig'
+export VISUAL='nvim'
 export EDITOR="$VISUAL"
-export GOPATH=$HOME/code/go
+export GOPATH="$HOME/code/go"
 export PASSWORD_STORE_DIR="$HOME/Dropbox/.password-store"
-export PATH=/usr/local/opt/curl/bin:/Users/callum/.cargo/bin:/Users/callum/.local/bin:$GOPATH/bin:/Users/callum/Library/Haskell/bin:/Users/callum/.cabal/bin:$PATH
-source $HOME/.export-secrets
+export VAULT_ADDR='https://vault.pusherplatform.io:8200'
+export PATH="$HOME/bin:$PATH"
+source "$HOME/.export-secrets"
+
+if [ -z "$DISPLAY" ] && [ -n "$XDG_VTNR" ] && [ "$XDG_VTNR" -eq 1 ]; then
+  startx
+fi

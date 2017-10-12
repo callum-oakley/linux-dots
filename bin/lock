@@ -1,0 +1,7 @@
+#!/usr/bin/env zsh
+
+image=/tmp/i3lock.png
+scrot $image
+convert $image -scale 12.5% -brightness-contrast -10x-10 -scale 800% $image
+i3lock -eui $image
+rm $image
