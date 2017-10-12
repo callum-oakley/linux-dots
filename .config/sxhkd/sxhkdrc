@@ -43,10 +43,7 @@ super + ctrl + Return
 super + ctrl + shift + Return
   firefox-developer
 super + ctrl + s
-  spotify
-# (TODO handle this automatically)
-super + ctrl + shift + s
-  spotify --force-device-scale-factor=1.5
+  spotify --force-device-scale-factor=$WINDOW_SCALING
 
 # Group management
 super + {0-9}

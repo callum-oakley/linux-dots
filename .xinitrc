@@ -5,8 +5,10 @@ if (xrandr | rg 'HDMI-2 connected'); then
   xrdb -override .Xresources-96dpi
   mons -s
   xset s off && xset dpms 10800 10800 10800
+  export WINDOW_SCALING='1'
 else
   xrdb -override .Xresources-144dpi
+  export WINDOW_SCALING='1.5'
 fi
 
 if (xinput list | rg 'OLKB'); then
