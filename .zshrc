@@ -19,6 +19,7 @@ colors
 
 autoload -U zmv
 
+alias dropbox='dropbox-cli'
 alias ff='firefox-developer'
 alias ghci='stack ghci'
 alias kc='kubectl'
