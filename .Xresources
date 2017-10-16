@@ -9,7 +9,7 @@ URxvt.keysym.Control-Shift-ISO_Left_Tab: perl:tabbedex:prev_tab
 URxvt.keysym.Control-Tab: perl:tabbedex:next_tab
 URxvt.keysym.Control-t: perl:tabbedex:new_tab
 URxvt.letterSpace: -1
-URxvt.lineSpace: 4
+URxvt.lineSpace: 1
 URxvt.perl-ext-common: tabbedex
 URxvt.saveLines: 10000
 URxvt.scrollBar: False
