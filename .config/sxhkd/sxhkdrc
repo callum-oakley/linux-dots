@@ -13,7 +13,7 @@ super + l
   lock
 super + s
   lock && systemctl suspend
-super + i
+super + t
   urxvt -e htop &; sleep 0.1; waitron window_snap middle
 
 # Media
