@@ -13,6 +13,8 @@ super + l
   lock
 super + s
   lock && systemctl suspend
+super + c
+  urxvt -e tty-clock -c
 super + t
   urxvt -e htop &; sleep 0.1; waitron window_snap middle
 

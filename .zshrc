@@ -31,6 +31,7 @@ alias todo='vi $HOME/notes/to-do.md'
 alias tree='tree -C'
 alias vi='nvim'
 alias vim='nvim'
+alias xvi='xargs nvim'
 
 source $HOME/.config/git-prompt.sh
 
