@@ -13,8 +13,6 @@ super + l
   lock
 super + s
   lock && systemctl suspend
-super + c
-  urxvt -e tty-clock -c
 super + t
   urxvt -e htop &; sleep 0.1; waitron window_snap middle
 
@@ -49,6 +47,10 @@ super + ctrl + shift + Return
   firefox-developer
 super + ctrl + s
   spotify --force-device-scale-factor=$WINDOW_SCALING
+super + ctrl + t
+  urxvt -e htop &; sleep 0.1; waitron window_snap middle
+super + ctrl + c
+  urxvt -e tty-clock -c &; sleep 0.1; waitron window_snap middle
 
 # Group management
 super + {1-9}
