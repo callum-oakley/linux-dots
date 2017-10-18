@@ -152,6 +152,8 @@ Stop immediate wakeup from suspend with the following systemd unit in
     [Install]
     WantedBy=multi-user.target
 
+Set up a basic firewall with iptables.
+
 ## Useful links
 
 - https://wiki.archlinux.org/index.php/installation_guide

@@ -49,12 +49,12 @@ super + ctrl + s
   spotify --force-device-scale-factor=$WINDOW_SCALING
 
 # Group management
-super + {0-9}
-  waitron group_toggle {0-9}
-super + shift + {0-9}
-  waitron group_add_window {0-9}
-super + ctrl + {0-9}
-  waitron group_activate_specific {0-9}
+super + {1-9}
+  waitron group_toggle {1-9}
+super + shift + {1-9}
+  waitron group_add_window {1-9}
+super + ctrl + {1-9}
+  waitron group_activate_specific {1-9}
 
 # Move windows
 super + c

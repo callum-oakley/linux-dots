@@ -16,3 +16,8 @@ waitron wm_config apply_settings true
 waitron wm_config pointer_actions move resize_side resize_corner
 waitron wm_config pointer_modifier super
 waitron wm_config click_to_focus any
+
+urxvt &
+sleep 0.1
+waitron window_snap middle
+waitron group_add_window 1

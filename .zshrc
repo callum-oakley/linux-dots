@@ -66,7 +66,7 @@ export HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_FOUND='fg=green'
 export HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_NOT_FOUND='fg=red'
 export HISTORY_SUBSTRING_SEARCH_FUZZY=1
 export KEYTIMEOUT=1
-export KUBECONFIG='kubeconfig'
+export KUBECONFIG="$HOME/.kube/config"
 export VISUAL='nvim'
 export EDITOR="$VISUAL"
 export GOPATH="$HOME/code/go"
