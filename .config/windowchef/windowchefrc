@@ -18,6 +18,6 @@ waitron wm_config pointer_modifier super
 waitron wm_config click_to_focus any
 
 urxvt &
-sleep 0.1
+sleep 0.2
 waitron window_snap middle
 waitron group_add_window 1

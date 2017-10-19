@@ -51,6 +51,8 @@ super + ctrl + t
   urxvt -e htop &; sleep 0.1; waitron window_snap middle
 super + ctrl + c
   urxvt -e tty-clock -c &; sleep 0.1; waitron window_snap middle
+super + ctrl + shift + c
+  urxvt -e tty-clock -c &; sleep 0.1; waitron window_maximize
 
 # Group management
 super + {1-9}
