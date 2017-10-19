@@ -6,6 +6,8 @@ Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
 Plug 'pangloss/vim-javascript'
 Plug 'sheerun/vim-polyglot'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 Plug 'tsiemens/vim-aftercolors'
 Plug 'wellle/targets.vim'
@@ -66,6 +68,7 @@ let g:javascript_plugin_flow = 1
 
 " keymaps
 inoremap <home> <esc>I
+nmap <leader>c gc
 nmap j ys
 nnoremap <PageDown> 9<down>
 nnoremap <PageUp> 9<up>
@@ -91,13 +94,13 @@ nnoremap <leader>ad :%d+<cr>
 nnoremap <leader>ak :%d_<cr>
 nnoremap <leader>ay :%y+<cr>
 nnoremap <leader>b :Buffer<cr>
-nnoremap <leader>cc :hi Comment ctermfg=8<cr>
-nnoremap <leader>ch :hi Comment ctermfg=None<cr>
 nnoremap <leader>d /<<<<<<<\\|=======\\|>>>>>>><cr>
 nnoremap <leader>e :Files<cr>
 nnoremap <leader>f gq
 nnoremap <leader>ff gqq
 nnoremap <leader>g* g*N
+nnoremap <leader>hc :hi Comment ctermfg=None<cr>
+nnoremap <leader>hh :hi Comment ctermfg=8<cr>
 nnoremap <leader>i :BLines<cr>
 nnoremap <leader>l :ls<cr>
 nnoremap <leader>n :bn<cr>
