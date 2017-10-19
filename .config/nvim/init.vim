@@ -101,16 +101,16 @@ nnoremap <leader>cc :hi Comment ctermfg=8<cr>
 nnoremap <leader>ch :hi Comment ctermfg=None<cr>
 nnoremap <leader>d /<<<<<<<\\|=======\\|>>>>>>><cr>
 nnoremap <leader>e :Files<cr>
-nnoremap <leader>r :Rg<cr>
 nnoremap <leader>f gq
 nnoremap <leader>ff gqq
 nnoremap <leader>g* g*N
-nnoremap <leader>i /\c
+nnoremap <leader>i :BLines
 nnoremap <leader>l :ls<cr>
 nnoremap <leader>n :bn<cr>
 nnoremap <leader>o o<esc>O
 nnoremap <leader>p "+p
 nnoremap <leader>q :q<cr>
+nnoremap <leader>r :Rg<cr>
 nnoremap <leader>s :w<cr>
 nnoremap <leader>t <nop>
 nnoremap <leader>t2 :set shiftwidth=2<cr>:set tabstop=2<cr>
