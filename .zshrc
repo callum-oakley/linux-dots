@@ -19,6 +19,30 @@ colors
 
 autoload -U zmv
 
+d() {
+  local dir
+  dir=$(fd -t d | fzf) &&
+  cd "$dir"
+}
+
+dh() {
+  local dir
+  dir=$(fd -t d --hidden | fzf) &&
+  cd "$dir"
+}
+
+v() {
+  local file
+  file=$(fd -t f | fzf) &&
+  nvim "$file"
+}
+
+vh() {
+  local file
+  file=$(fd -t f --hidden | fzf) &&
+  nvim "$file"
+}
+
 alias dropbox='dropbox-cli'
 alias ff='firefox-developer'
 alias ghci='stack ghci'
@@ -30,7 +54,6 @@ alias swd='pwd > $HOME/.wd'
 alias todo='vi $HOME/notes/to-do.md'
 alias tree='tree -C'
 alias vi='nvim'
-alias vif='nvim $(fd | fzf)'
 alias vim='nvim'
 alias xvi='xargs nvim'
 
@@ -64,6 +87,8 @@ source $HOME/bin/zsh-history-substring-search.zsh
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
 
+export FZF_DEFAULT_COMMAND='fd -t f'
+export FZF_DEFAULT_OPTS='--reverse --height 16'
 export HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_FOUND='fg=green'
 export HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_NOT_FOUND='fg=red'
 export HISTORY_SUBSTRING_SEARCH_FUZZY=1

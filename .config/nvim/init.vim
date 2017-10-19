@@ -52,12 +52,6 @@ vnoremap <silent> # :<C-U>
   \escape(@", '?\.*$^~['), '\_s\+', '\\_s\\+', 'g')<CR><CR>
   \gV:call setreg('"', old_reg, old_regtype)<CR><Paste>
 
-" Get syntax group at cursor
-map <F10> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
-\ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"
-\ . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<CR>
-"
-" Similarly, we can apply it to fzf#vim#grep. To use ripgrep instead of ag:
 command! -bang -nargs=* Rg
   \ call fzf#vim#grep(
   \   'rg --column --line-number --no-heading --color=always '.shellescape(<q-args>), 1,
@@ -96,7 +90,7 @@ nnoremap <leader>a <nop>
 nnoremap <leader>ad :%d+<cr>
 nnoremap <leader>ak :%d_<cr>
 nnoremap <leader>ay :%y+<cr>
-nnoremap <leader>b :b 
+nnoremap <leader>b :Buffer<cr>
 nnoremap <leader>cc :hi Comment ctermfg=8<cr>
 nnoremap <leader>ch :hi Comment ctermfg=None<cr>
 nnoremap <leader>d /<<<<<<<\\|=======\\|>>>>>>><cr>
