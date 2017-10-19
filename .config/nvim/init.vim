@@ -104,7 +104,7 @@ nnoremap <leader>e :Files<cr>
 nnoremap <leader>f gq
 nnoremap <leader>ff gqq
 nnoremap <leader>g* g*N
-nnoremap <leader>i :BLines
+nnoremap <leader>i :BLines<cr>
 nnoremap <leader>l :ls<cr>
 nnoremap <leader>n :bn<cr>
 nnoremap <leader>o o<esc>O
