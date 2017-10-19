@@ -1,8 +1,9 @@
 call plug#begin('~/.config/nvim/plugged')
 Plug 'chriskempson/base16-vim'
-Plug 'ctrlpvim/ctrlp.vim'
 Plug 'fatih/vim-go'
 Plug 'jiangmiao/auto-pairs'
+Plug 'junegunn/fzf'
+Plug 'junegunn/fzf.vim'
 Plug 'pangloss/vim-javascript'
 Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-surround'
@@ -55,9 +56,16 @@ vnoremap <silent> # :<C-U>
 map <F10> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
 \ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"
 \ . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<CR>
+"
+" Similarly, we can apply it to fzf#vim#grep. To use ripgrep instead of ag:
+command! -bang -nargs=* Rg
+  \ call fzf#vim#grep(
+  \   'rg --column --line-number --no-heading --color=always '.shellescape(<q-args>), 1,
+  \   <bang>0 ? fzf#vim#with_preview('up:60%')
+  \           : fzf#vim#with_preview('right:50%:hidden', '?'),
+  \   <bang>0)
 
 " plugin options
-let g:ctrlp_working_path_mode = 'c'
 let g:haskell_indent_case_alternative = 1
 let g:jsx_ext_required = 0
 let g:javascript_plugin_flow = 1
@@ -92,7 +100,8 @@ nnoremap <leader>b :b
 nnoremap <leader>cc :hi Comment ctermfg=8<cr>
 nnoremap <leader>ch :hi Comment ctermfg=None<cr>
 nnoremap <leader>d /<<<<<<<\\|=======\\|>>>>>>><cr>
-nnoremap <leader>e :CtrlP<cr>
+nnoremap <leader>e :Files<cr>
+nnoremap <leader>r :Rg<cr>
 nnoremap <leader>f gq
 nnoremap <leader>ff gqq
 nnoremap <leader>g* g*N
