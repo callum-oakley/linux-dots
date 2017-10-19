@@ -30,6 +30,7 @@ alias swd='pwd > $HOME/.wd'
 alias todo='vi $HOME/notes/to-do.md'
 alias tree='tree -C'
 alias vi='nvim'
+alias vif='nvim $(fd | fzf)'
 alias vim='nvim'
 alias xvi='xargs nvim'
 
