@@ -47,8 +47,6 @@ super + ctrl + shift + Return
   firefox-developer
 super + ctrl + m
   spotify --force-device-scale-factor=$WINDOW_SCALING
-super + ctrl + s
-  slack
 super + ctrl + t
   urxvt -e htop &; sleep 0.1; waitron window_snap middle
 super + ctrl + c
