@@ -65,6 +65,7 @@ command! -bang -nargs=* Rg
 let g:haskell_indent_case_alternative = 1
 let g:jsx_ext_required = 0
 let g:javascript_plugin_flow = 1
+let g:fzf_layout = { 'down': '~16' }
 
 " keymaps
 inoremap <home> <esc>I
