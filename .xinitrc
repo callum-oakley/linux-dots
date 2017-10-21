@@ -26,7 +26,7 @@ else
 fi
 
 $HOME/bin/configure-inputs &
-xsetroot -solid '#65737e' &
+xsetroot -solid '#1B2B34' &
 xsetroot -cursor_name left_ptr &
 eval $(ssh-agent)
 sxhkd -c $HOME/.config/sxhkd/sxhkdrc &
