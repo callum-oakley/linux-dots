@@ -73,19 +73,28 @@ super + shift + {Up,Down,Left,Right}
   waitron window_move {0 -60, 0 60, -60 0, 60 0}
 
 # Size windows
-super + ctrl + shift + 1
+super + alt + ctrl + 1
   waitron window_resize_absolute $WINDOW_WIDTH_1 $WINDOW_HEIGHT_FULL ;\
   waitron window_snap middle
-super + ctrl + shift + 2
+super + alt + ctrl + 2
   waitron window_resize_absolute $WINDOW_WIDTH_2 $WINDOW_HEIGHT_FULL ;\
   waitron window_snap middle
-super + ctrl + shift + 3
+super + alt + ctrl + 3
   waitron window_resize_absolute $WINDOW_WIDTH_3 $WINDOW_HEIGHT_FULL ;\
   waitron window_snap middle
-super + ctrl + shift + 4
+super + alt + ctrl + shift + 1
+  waitron window_resize_absolute $WINDOW_WIDTH_1 $WINDOW_HEIGHT_TWO_THIRDS ;\
+  waitron window_snap middle
+super + alt + ctrl + shift + 2
+  waitron window_resize_absolute $WINDOW_WIDTH_2 $WINDOW_HEIGHT_TWO_THIRDS ;\
+  waitron window_snap middle
+super + alt + ctrl + shift + 3
+  waitron window_resize_absolute $WINDOW_WIDTH_3 $WINDOW_HEIGHT_TWO_THIRDS ;\
+  waitron window_snap middle
+super + alt + ctrl + 4
   waitron window_resize_absolute $WINDOW_WIDTH_1 $WINDOW_HEIGHT_HALF ;\
   waitron window_snap middle
-super + ctrl + shift + 5
+super + alt + ctrl + 5
   waitron window_resize_absolute $WINDOW_WIDTH_2 $WINDOW_HEIGHT_HALF ;\
   waitron window_snap middle
 super + m
