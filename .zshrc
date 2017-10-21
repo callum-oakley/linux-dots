@@ -33,6 +33,13 @@ dh() {
   pwd > $HOME/.wd
 }
 
+dt() {
+  local dir
+  dir=$(cd && fd -t d | fzf) &&
+  cd "$HOME/$dir" &&
+  pwd > $HOME/.wd
+}
+
 v() {
   local file
   file=$(fd -t f | fzf) &&
