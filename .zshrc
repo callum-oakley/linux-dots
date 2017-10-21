@@ -22,13 +22,15 @@ autoload -U zmv
 d() {
   local dir
   dir=$(fd -t d | fzf) &&
-  cd "$dir"
+  cd "$dir" &&
+  pwd > $HOME/.wd
 }
 
 dh() {
   local dir
   dir=$(fd -t d --hidden | fzf) &&
-  cd "$dir"
+  cd "$dir" &&
+  pwd > $HOME/.wd
 }
 
 v() {
@@ -46,9 +48,9 @@ vh() {
 alias dropbox='dropbox-cli'
 alias ff='firefox-developer'
 alias ghci='stack ghci'
+alias j='cd $(cat $HOME/.wd) && echo $(pwd)'
 alias kc='kubectl'
 alias ls='ls --color=auto'
-alias lwd='cd $(cat $HOME/.wd)'
 alias mmv='noglob zmv -W'
 alias swd='pwd > $HOME/.wd'
 alias t='cd $HOME/notes && nvim to-do.md; cd'
