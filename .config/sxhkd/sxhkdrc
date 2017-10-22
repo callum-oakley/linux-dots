@@ -79,9 +79,9 @@ super + alt + ctrl + {Up,Down,Left,Right}
 
 # Resize windows
 super + {Prior,Next,Home,End}
-  waitron window_resize {0 -$UNIT_Y, 0 $UNIT_Y, -$UNIT_X 0, $UNIT_X 0}
-super + shift + {Prior,Next,Home,End}
   waitron window_resize {0 -$((2 * UNIT_Y)), 0 $((2 * UNIT_Y)), -$((2 * UNIT_X)) 0, $((2 * UNIT_X)) 0}
+super + shift + {Prior,Next,Home,End}
+  waitron window_resize {0 -$UNIT_Y, 0 $UNIT_Y, -$UNIT_X 0, $UNIT_X 0}
 super + m
   waitron window_monocle
 super + f
