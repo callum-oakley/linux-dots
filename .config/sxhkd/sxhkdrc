@@ -87,22 +87,34 @@ super + alt + ctrl + {Up,Down,Left,Right}
 
 # Size windows
 super + alt + ctrl + 1
-  waitron window_resize_absolute $((8 * UNIT_X - GAP)) $((24 * UNIT_Y - GAP));\
+  x=$((8 * UNIT_X - GAP));\
+  y=$((GRID_SIZE * UNIT_Y - GAP));\
+  waitron window_resize_absolute $x $y;\
   waitron window_snap middle
 super + alt + ctrl + shift + 1
-  waitron window_resize_absolute $((8 * UNIT_X - GAP)) $((12 * UNIT_Y - GAP));\
+  x=$((8 * UNIT_X - GAP));\
+  y=$((3 * GRID_SIZE / 4 * UNIT_Y - GAP));\
+  waitron window_resize_absolute $x $y;\
   waitron window_snap middle
 super + alt + ctrl + 2
-  waitron window_resize_absolute $((12 * UNIT_X - GAP)) $((24 * UNIT_Y - GAP));\
+  x=$((12 * UNIT_X - GAP));\
+  y=$((GRID_SIZE * UNIT_Y - GAP));\
+  waitron window_resize_absolute $x $y;\
   waitron window_snap middle
 super + alt + ctrl + shift + 2
-  waitron window_resize_absolute $((12 * UNIT_X - GAP)) $((16 * UNIT_Y - GAP));\
+  x=$((12 * UNIT_X - GAP));\
+  y=$((3 * GRID_SIZE / 4 * UNIT_Y - GAP));\
+  waitron window_resize_absolute $x $y;\
   waitron window_snap middle
 super + alt + ctrl + 3
-  waitron window_resize_absolute $((16 * UNIT_X - GAP)) $((24 * UNIT_Y - GAP));\
+  x=$((16 * UNIT_X - GAP));\
+  y=$((GRID_SIZE * UNIT_Y - GAP));\
+  waitron window_resize_absolute $x $y;\
   waitron window_snap middle
 super + alt + ctrl + shift + 3
-  waitron window_resize_absolute $((16 * UNIT_X - GAP)) $((20 * UNIT_Y - GAP));\
+  x=$((16 * UNIT_X - GAP));\
+  y=$((3 * GRID_SIZE / 4 * UNIT_Y - GAP));\
+  waitron window_resize_absolute $x $y;\
   waitron window_snap middle
 
 # Resize windows
