@@ -37,23 +37,19 @@ super + shift + z
 # Applications
 super + ctrl + Return
   urxvt &; sleep 0.2;\
-  waitron window_resize_absolute $((4 * UNIT_X - GAP)) $((8 * UNIT_Y - GAP));\
+  waitron window_resize_absolute $((8 * UNIT_X - GAP)) $((8 * UNIT_Y - GAP));\
   waitron window_snap middle
 super + ctrl + shift + Return
-  firefox-developer &; sleep 0.2;\
-  waitron window_resize_absolute $((6 * UNIT_X - GAP)) $((10 * UNIT_Y - GAP));\
-  waitron window_snap middle
+  firefox-developer
 super + ctrl + m
-  spotify --force-device-scale-factor=$WINDOW_SCALING &; sleep 0.2;\
-  waitron window_resize_absolute $((8 * UNIT_X - GAP)) $((10 * UNIT_Y - GAP));\
-  waitron window_snap middle
+  spotify --force-device-scale-factor=$WINDOW_SCALING
 super + ctrl + t
   urxvt -e htop &; sleep 0.2;\
-  waitron window_resize_absolute $((4 * UNIT_X - GAP)) $((6 * UNIT_Y - GAP));\
+  waitron window_resize_absolute $((8 * UNIT_X - GAP)) $((8 * UNIT_Y - GAP));\
   waitron window_snap middle
 super + ctrl + c
   urxvt -e tty-clock -c &; sleep 0.2;\
-  waitron window_resize_absolute $((4 * UNIT_X - GAP)) $((4 * UNIT_Y - GAP));\
+  waitron window_resize_absolute $((8 * UNIT_X - GAP)) $((8 * UNIT_Y - GAP));\
   waitron window_snap middle
 super + ctrl + shift + c
   urxvt -e tty-clock -c &; sleep 0.2;\
@@ -70,18 +66,62 @@ super + ctrl + {1-9}
 # Move windows
 super + c
   waitron window_snap middle
-super + {Up,Down,Left,Right}
-  waitron window_move {0 -$UNIT_Y, 0 $UNIT_Y, -$UNIT_X 0, $UNIT_X 0}
-super + shift + {Up,Down,Left,Right}
-  waitron window_move {0 -$((2 * UNIT_Y)), 0 $((2 * UNIT_Y)), -$((2 * UNIT_X)) 0, $((2 * UNIT_X)) 0}
+super + Up
+  waitron window_move 0 -$((2 * UNIT_Y))
+super + Down
+  waitron window_move 0 $((2 * UNIT_Y))
+super + Left
+  waitron window_move -$((2 * UNIT_X)) 0
+super + Right
+  waitron window_move $((2 * UNIT_X)) 0
+super + shift + Up
+  waitron window_move 0 -$UNIT_Y
+super + shift + Down
+  waitron window_move 0 $UNIT_Y
+super + shift + Left
+  waitron window_move -$UNIT_X 0
+super + shift + Right
+  waitron window_move $UNIT_X 0
 super + alt + ctrl + {Up,Down,Left,Right}
   waitron window_snap {topleft,bottomright,bottomleft,topright}
 
+# Size windows
+super + alt + ctrl + 1
+  waitron window_resize_absolute $((8 * UNIT_X - GAP)) $((24 * UNIT_Y - GAP));\
+  waitron window_snap middle
+super + alt + ctrl + shift + 1
+  waitron window_resize_absolute $((8 * UNIT_X - GAP)) $((12 * UNIT_Y - GAP));\
+  waitron window_snap middle
+super + alt + ctrl + 2
+  waitron window_resize_absolute $((12 * UNIT_X - GAP)) $((24 * UNIT_Y - GAP));\
+  waitron window_snap middle
+super + alt + ctrl + shift + 2
+  waitron window_resize_absolute $((12 * UNIT_X - GAP)) $((16 * UNIT_Y - GAP));\
+  waitron window_snap middle
+super + alt + ctrl + 3
+  waitron window_resize_absolute $((16 * UNIT_X - GAP)) $((24 * UNIT_Y - GAP));\
+  waitron window_snap middle
+super + alt + ctrl + shift + 3
+  waitron window_resize_absolute $((16 * UNIT_X - GAP)) $((20 * UNIT_Y - GAP));\
+  waitron window_snap middle
+
 # Resize windows
-super + {Prior,Next,Home,End}
-  waitron window_resize {0 -$((2 * UNIT_Y)), 0 $((2 * UNIT_Y)), -$((2 * UNIT_X)) 0, $((2 * UNIT_X)) 0}
-super + shift + {Prior,Next,Home,End}
-  waitron window_resize {0 -$UNIT_Y, 0 $UNIT_Y, -$UNIT_X 0, $UNIT_X 0}
+super + Prior
+  waitron window_resize 0 -$((4 * UNIT_Y))
+super + Next
+  waitron window_resize 0 $((4 * UNIT_Y))
+super + Home
+  waitron window_resize -$((4 * UNIT_X)) 0
+super + End
+  waitron window_resize $((4 * UNIT_X)) 0
+super + shift + Prior
+  waitron window_resize 0 -$((2 * UNIT_Y))
+super + shift + Next
+  waitron window_resize 0 $((2 * UNIT_Y))
+super + shift + Home
+  waitron window_resize -$((2 * UNIT_X)) 0
+super + shift + End
+  waitron window_resize $((2 * UNIT_X)) 0
 super + m
   waitron window_monocle
 super + f
