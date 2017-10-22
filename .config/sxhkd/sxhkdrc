@@ -39,7 +39,7 @@ super + ctrl + Return
   urxvt &; sleep 0.2;\
   waitron window_resize_absolute $((8 * UNIT_X - GAP)) $((8 * UNIT_Y - GAP));\
   waitron window_snap middle
-super + ctrl + shift + Return
+super + ctrl + b
   firefox-developer
 super + ctrl + m
   spotify --force-device-scale-factor=$WINDOW_SCALING
@@ -107,20 +107,28 @@ super + alt + ctrl + shift + 3
 
 # Resize windows
 super + Prior
+  waitron window_move 0 $((2 * UNIT_Y));\
   waitron window_resize 0 -$((4 * UNIT_Y))
 super + Next
+  waitron window_move 0 -$((2 * UNIT_Y));\
   waitron window_resize 0 $((4 * UNIT_Y))
 super + Home
+  waitron window_move $((2 * UNIT_X)) 0;\
   waitron window_resize -$((4 * UNIT_X)) 0
 super + End
+  waitron window_move -$((2 * UNIT_X)) 0;\
   waitron window_resize $((4 * UNIT_X)) 0
 super + shift + Prior
+  waitron window_move 0 $UNIT_Y;\
   waitron window_resize 0 -$((2 * UNIT_Y))
 super + shift + Next
+  waitron window_move 0 -$UNIT_Y;\
   waitron window_resize 0 $((2 * UNIT_Y))
 super + shift + Home
+  waitron window_move $UNIT_X 0;\
   waitron window_resize -$((2 * UNIT_X)) 0
 super + shift + End
+  waitron window_move -$UNIT_X 0;\
   waitron window_resize $((2 * UNIT_X)) 0
 super + m
   waitron window_monocle
