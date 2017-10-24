@@ -19,38 +19,25 @@ colors
 
 autoload -U zmv
 
-d() {
+o_widget() {
   local dir
   dir=$(fd -t d | fzf) &&
-  cd "$dir" &&
-  pwd > $HOME/.wd
+  cd "$dir"
+  zle reset-prompt
 }
 
-dh() {
-  local dir
-  dir=$(fd -t d --hidden | fzf) &&
-  cd "$dir" &&
-  pwd > $HOME/.wd
-}
+zle -N o_widget
+bindkey '^o' o_widget
 
-dt() {
-  local dir
-  dir=$(cd && fd -t d | fzf) &&
-  cd "$HOME/$dir" &&
-  pwd > $HOME/.wd
-}
-
-v() {
+e_widget() {
   local file
   file=$(fd -t f | fzf) &&
   nvim "$file"
+  zle reset-prompt
 }
 
-vh() {
-  local file
-  file=$(fd -t f --hidden | fzf) &&
-  nvim "$file"
-}
+zle -N e_widget
+bindkey '^e' e_widget
 
 alias dropbox='dropbox-cli'
 alias ff='firefox-developer'
@@ -61,7 +48,7 @@ alias l='cd $(cat $HOME/.wd) && echo $(pwd)'
 alias ls='ls --color=auto'
 alias mmv='noglob zmv -W'
 alias p='cd $HOME/notes; nvim plan.md; cd -'
-alias swd='pwd > $HOME/.wd'
+alias s='pwd > $HOME/.wd'
 alias t='cd $HOME/notes; nvim to-do.md; cd -'
 alias tree='tree -C'
 alias vi='nvim'
