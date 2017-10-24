@@ -1,19 +1,19 @@
 #!/usr/bin/env zsh
 
-if (xinput list | rg 'OLKB'); then
+if (xinput list | rg -q 'OLKB'); then
   xinput disable 'Apple Inc. Apple Internal Keyboard / Trackpad'
 fi
 xset r rate 200 30
 
-if (xinput list | rg 'CST'); then
+if (xinput list | rg -q 'CST'); then
   trackball_id=$(xinput list | rg 'CST' | cut -f 2 | cut -d= -f 2)
   xinput set-prop $trackball_id 283 0, 1
   xinput set-prop $trackball_id 280 -0.7
   xinput set-prop $trackball_id 276 1
 fi
 
-if (xinput list | rg 'bcm5974'); then
+if (xinput list | rg -q 'bcm5974'); then
   trackpad_id=$(xinput list | rg 'bcm5974' | cut -f 2 | cut -d= -f 2)
-  xinput set-prop $trackpad_id 294 1
-  xinput set-prop $trackpad_id 276 1
+  xinput set-prop 'bcm5974' 'libinput Tapping Enabled' 1
+  xinput set-prop 'bcm5974' 'libinput Natural Scrolling Enabled' 1
 fi

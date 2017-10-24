@@ -1,7 +1,7 @@
 #!/bin/sh
 
 xrdb $HOME/.Xresources
-if (xrandr | rg 'HDMI-2 connected'); then
+if (xrandr | rg -q 'HDMI-2 connected'); then
   xrdb -override .Xresources-96dpi
   mons -s
   xset s off && xset dpms 10800 10800 10800
@@ -21,7 +21,7 @@ export GAP=$((2 * BORDER + PAD))
 export UNIT_X=$(((x - PAD) / GRID_SIZE))
 export UNIT_Y=$(((y - PAD) / GRID_SIZE))
 
-if (aplay -L | rg 'CARD=Audio'); then
+if (aplay -L | rg -q 'CARD=Audio'); then
   export ALSA_CARD=Audio
 else
   export ALSA_CARD=PCH
