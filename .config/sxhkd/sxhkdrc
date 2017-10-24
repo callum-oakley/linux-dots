@@ -28,6 +28,12 @@ XF86AudioNext
 XF86AudioPrev
   playerctl previous
 
+# Backlight
+super + XF86AudioRaiseVolume
+  xbacklight -inc 10
+super + XF86AudioLowerVolume
+  xbacklight -dec 10
+
 # Screenshots
 super + z
   scrot -e 'mv $f ~/Desktop/'

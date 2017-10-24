@@ -97,7 +97,7 @@ export EDITOR="$VISUAL"
 export GOPATH="$HOME/code/go"
 export PASSWORD_STORE_DIR="$HOME/Dropbox/.password-store"
 export VAULT_ADDR='https://vault.pusherplatform.io:8200'
-export PATH="$HOME/.local/bin:$HOME/bin:$PATH"
+export PATH="$HOME/.local/bin:$HOME/bin:$HOME/.yarn/bin:$PATH"
 source "$HOME/.export-secrets"
 
 if [ -z "$DISPLAY" ] && [ -n "$XDG_VTNR" ] && [ "$XDG_VTNR" -eq 1 ]; then
