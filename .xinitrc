@@ -1,7 +1,7 @@
 #!/bin/sh
 
 xrdb $HOME/.Xresources
-if (xrandr | rg -q 'HDMI-2 connected'); then
+if (xrandr | rg -q 'HDMI2 connected'); then
   xrdb -override .Xresources-96dpi
   mons -s
   xset s off && xset dpms 10800 10800 10800
@@ -13,13 +13,13 @@ else
   export WINDOW_SCALING='1.5'
 fi
 
-x=$(xrandr | rg '\*' | cut -d ' ' -f 4 | cut -d x -f 1)
-y=$(xrandr | rg '\*' | cut -d ' ' -f 4 | cut -d x -f 2)
+export SCREEN_X=$(xrandr | rg '\*' | cut -d ' ' -f 4 | cut -d x -f 1)
+export SCREEN_Y=$(xrandr | rg '\*' | cut -d ' ' -f 4 | cut -d x -f 2)
 export BORDER=5
 export PAD=20
 export GAP=$((2 * BORDER + PAD))
-export UNIT_X=$(((x - PAD) / GRID_SIZE))
-export UNIT_Y=$(((y - PAD) / GRID_SIZE))
+export UNIT_X=$(((SCREEN_X - PAD) / GRID_SIZE))
+export UNIT_Y=$(((SCREEN_Y - PAD) / GRID_SIZE))
 
 if (aplay -L | rg -q 'CARD=Audio'); then
   export ALSA_CARD=Audio

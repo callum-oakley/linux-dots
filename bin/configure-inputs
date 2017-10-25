@@ -6,14 +6,14 @@ fi
 xset r rate 200 30
 
 if (xinput list | rg -q 'CST'); then
-  trackball_id=$(xinput list | rg 'CST' | cut -f 2 | cut -d= -f 2)
-  xinput set-prop $trackball_id 283 0, 1
-  xinput set-prop $trackball_id 280 -0.7
-  xinput set-prop $trackball_id 276 1
+  trackball_name='Clearly Superior Technologies. CST Laser Trackball'
+  xinput set-prop "$trackball_name" 'libinput Accel Profile Enabled' 0, 1
+  xinput set-prop "$trackball_name" 'libinput Accel Speed' -0.7
+  xinput set-prop "$trackball_name" 'libinput Natural Scrolling Enabled' 1
 fi
 
 if (xinput list | rg -q 'bcm5974'); then
-  trackpad_id=$(xinput list | rg 'bcm5974' | cut -f 2 | cut -d= -f 2)
-  xinput set-prop 'bcm5974' 'libinput Tapping Enabled' 1
-  xinput set-prop 'bcm5974' 'libinput Natural Scrolling Enabled' 1
+  trackpad_name='bcm5974'
+  xinput set-prop "$trackpad_name" 'libinput Tapping Enabled' 1
+  xinput set-prop "$trackpad_name" 'libinput Natural Scrolling Enabled' 1
 fi
