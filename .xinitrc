@@ -1,7 +1,7 @@
 #!/bin/sh
 
 xrdb $HOME/.Xresources
-if (xrandr | rg -q 'HDMI2 connected'); then
+if (xrandr | rg -q 'HDMI-?. connected'); then
   xrdb -override .Xresources-96dpi
   mons -s
   xset s off && xset dpms 10800 10800 10800
