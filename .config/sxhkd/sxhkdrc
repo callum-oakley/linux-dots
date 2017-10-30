@@ -49,6 +49,8 @@ super + ctrl + b
   firefox-developer
 super + ctrl + m
   spotify --force-device-scale-factor=$WINDOW_SCALING
+super + ctrl + d
+  sqlectron
 super + ctrl + t
   urxvt -e htop &; sleep 0.2;\
   waitron window_resize_absolute $((8 * UNIT_X - GAP)) $((8 * UNIT_Y - GAP));\

@@ -13,13 +13,13 @@ else
   export WINDOW_SCALING='1.5'
 fi
 
-export SCREEN_X=$(xrandr | rg '\*' | cut -d ' ' -f 4 | cut -d x -f 1)
-export SCREEN_Y=$(xrandr | rg '\*' | cut -d ' ' -f 4 | cut -d x -f 2)
+export SCREEN_W=$(wattr w $(lsw -r))
+export SCREEN_H=$(wattr h $(lsw -r))
 export BORDER=5
 export PAD=20
 export GAP=$((2 * BORDER + PAD))
-export UNIT_X=$(((SCREEN_X - PAD) / GRID_SIZE))
-export UNIT_Y=$(((SCREEN_Y - PAD) / GRID_SIZE))
+export UNIT_X=$(((SCREEN_W - PAD) / GRID_SIZE))
+export UNIT_Y=$(((SCREEN_H - PAD) / GRID_SIZE))
 
 if (aplay -L | rg -q 'CARD=Audio'); then
   export ALSA_CARD=Audio
@@ -27,9 +27,11 @@ else
   export ALSA_CARD=PCH
 fi
 
-$HOME/bin/configure-inputs &
-xsetroot -solid '#1B2B34' &
-xsetroot -cursor_name left_ptr &
+$HOME/bin/configure-inputs
+xsetroot -solid '#1B2B34'
+xsetroot -cursor_name left_ptr
 eval $(ssh-agent)
+
+unclutter &
 sxhkd -c $HOME/.config/sxhkd/sxhkdrc &
 exec windowchef
