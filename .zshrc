@@ -82,9 +82,10 @@ zle -N zle-line-init
 zle -N zle-keymap-select
 
 source $HOME/bin/zsh-history-substring-search.zsh
-
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
+
+source /usr/share/chruby/chruby.sh
 
 export FZF_DEFAULT_COMMAND='fd -t f'
 export FZF_DEFAULT_OPTS='--reverse --height 16'
