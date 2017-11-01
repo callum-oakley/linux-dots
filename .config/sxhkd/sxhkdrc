@@ -41,6 +41,8 @@ super + shift + z
   sleep 0.2; scrot -e 'mv $f ~/Desktop/' -s
 
 # Applications
+super + ctrl + e
+  emoji-keyboard -s
 super + ctrl + Return
   urxvt &; sleep 0.2;\
   waitron window_resize_absolute $((8 * UNIT_X - GAP)) $((8 * UNIT_Y - GAP));\

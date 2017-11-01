@@ -39,12 +39,15 @@ e_widget() {
 zle -N e_widget
 bindkey '^e' e_widget
 
+alias diff='colordiff -u'
 alias dropbox='dropbox-cli'
 alias ff='firefox-developer'
 alias ghci='stack ghci'
 alias j='cd $HOME/notes; nvim journal.md; cd "$OLDPWD"'
 alias kc='kubectl'
 alias kcf='kubectl -n feeds'
+alias kcm='kubectl -n monitoring'
+alias kcp='kubectl -n platform'
 alias l='cd $(cat $HOME/.wd) && pwd'
 alias ls='ls --color=auto'
 alias mmv='noglob zmv -W'
@@ -99,8 +102,8 @@ export EDITOR="$VISUAL"
 export GOPATH="$HOME/code/go"
 export PASSWORD_STORE_DIR="$HOME/Dropbox/.password-store"
 export VAULT_ADDR='https://vault.pusherplatform.io:8200'
-export GEM_HOME=$(ruby -e 'print Gem.user_dir')
-export PATH="$GEM_HOME/bin:$HOME/.local/bin:$HOME/bin:$HOME/.yarn/bin:$PATH"
+export GEM_HOME=$(/opt/rubies/ruby-2.3.4/bin/ruby -e 'print Gem.user_dir')
+export PATH="$GOPATH/bin:$GEM_HOME/bin:$HOME/.local/bin:$HOME/bin:$HOME/.yarn/bin:$PATH"
 source "$HOME/.export-secrets"
 
 if [ -z "$DISPLAY" ] && [ -n "$XDG_VTNR" ] && [ "$XDG_VTNR" -eq 1 ]; then
