@@ -4,7 +4,6 @@ xrdb $HOME/.Xresources
 if (xrandr | rg -q 'HDMI-?. connected'); then
   xrdb -override .Xresources-96dpi
   mons -s
-  xset s off && xset dpms 10800 10800 10800
   export GRID_SIZE=24
   export WINDOW_SCALING='1'
 else
@@ -12,6 +11,7 @@ else
   export GRID_SIZE=16
   export WINDOW_SCALING='1.5'
 fi
+xset s off && xset dpms 10800 10800 10800
 
 export SCREEN_W=$(wattr w $(lsw -r))
 export SCREEN_H=$(wattr h $(lsw -r))
