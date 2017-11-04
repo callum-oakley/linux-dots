@@ -32,6 +32,7 @@ set tabstop=2
 
 " filetype specific settings
 autocmd FileType go setlocal noexpandtab shiftwidth=4 tabstop=4 listchars=tab:\ \ ,trail:·
+autocmd FileType c setlocal shiftwidth=4 tabstop=4
 autocmd FileType typescript setlocal shiftwidth=4 tabstop=4
 autocmd FileType lhaskell setlocal fo+=ro
 

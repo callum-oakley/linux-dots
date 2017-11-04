@@ -90,6 +90,8 @@ bindkey '^[[B' history-substring-search-down
 
 source /usr/share/chruby/chruby.sh
 
+tabs -4
+
 export FZF_DEFAULT_COMMAND='fd -t f'
 export FZF_DEFAULT_OPTS='--reverse --height 16'
 export HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_FOUND='fg=green'
