@@ -89,6 +89,7 @@ bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
 
 source /usr/share/chruby/chruby.sh
+chruby ruby-2.3.4
 
 tabs -4
 
