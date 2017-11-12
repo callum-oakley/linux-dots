@@ -1,0 +1,45 @@
+body {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.card {
+  font-size: 2rem;
+  text-align: center;
+  color: #C0C5CE;
+  background-color: #1B2B34;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+}
+
+.container {
+  margin: -1rem;
+  padding: 4rem 0;
+}
+
+.container p {
+  padding: 0 1rem;
+}
+
+.big {
+  font-size: 4rem;
+}
+
+.secondary {
+  background-color: #343D46;
+}
+
+.bullet {
+  color: #65737E;
+}
+
+.単語 {
+  color: #99C794;
+}
+
+.漢字 {
+  color: #EC5f67;
+}

@@ -21,6 +21,11 @@ export GAP=$((2 * BORDER + PAD))
 export UNIT_X=$(((SCREEN_W - PAD) / GRID_SIZE))
 export UNIT_Y=$(((SCREEN_H - PAD) / GRID_SIZE))
 
+export GTK_IM_MODULE=fcitx
+export QT_IM_MODULE=fcitx
+export XMODIFIERS=@im=fcitx
+fcitx
+
 if (aplay -L | rg -q 'CARD=Audio'); then
   export ALSA_CARD=Audio
 else

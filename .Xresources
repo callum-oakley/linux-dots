@@ -1,10 +1,19 @@
-URxvt.boldFont: xft:Nitti Medium:size=12,xft:Symbola:size=12
-URxvt.cursorBlink: True
-URxvt.font: xft:Nitti Light:size=12,xft:Symbola:size=12
+URxvt.font: \
+  xft:Nitti Light:size=12,\
+  xft:IPAGothic,\
+  xft:Symbola
+URxvt.italicFont: \
+  xft:Nitti Light:Italic:size=12,\
+  xft:IPAMincho,\
+  xft:Symbola
+URxvt.boldFont: \
+  xft:Nitti Medium:size=12,\
+  xft:IPAGothic,\
+  xft:Symbola
 URxvt.internalBorder: 25
 URxvt.iso14755: False
 URxvt.iso14755_52: False
-URxvt.italicFont: xft:Nitti Light:Italic:size=12,xft:Symbola:size=12
+URxvt.cursorBlink: True
 URxvt.keysym.Control-Shift-ISO_Left_Tab: perl:tabbedex:prev_tab
 URxvt.keysym.Control-Tab: perl:tabbedex:next_tab
 URxvt.keysym.Control-t: perl:tabbedex:new_tab

@@ -41,6 +41,8 @@ super + shift + z
   sleep 0.2; scrot -e 'mv $f ~/Desktop/' -s
 
 # Applications
+super + ctrl + a
+  anki
 super + ctrl + e
   emoji-keyboard -s
 super + ctrl + Return
