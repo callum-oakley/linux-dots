@@ -41,14 +41,14 @@ super + shift + z
   sleep 0.2; scrot -e 'mv $f ~/Desktop/' -s
 
 # Applications
+super + ctrl + space
+  urxvt &; sleep 0.5;\
+  waitron window_resize_absolute $((8 * UNIT_X - GAP)) $((8 * UNIT_Y - GAP));\
+  waitron window_snap middle
 super + ctrl + a
   anki
 super + ctrl + e
   emoji-keyboard -s
-super + ctrl + Return
-  urxvt &; sleep 0.2;\
-  waitron window_resize_absolute $((8 * UNIT_X - GAP)) $((8 * UNIT_Y - GAP));\
-  waitron window_snap middle
 super + ctrl + b
   firefox-developer
 super + ctrl + m
@@ -56,15 +56,15 @@ super + ctrl + m
 super + ctrl + d
   sqlectron
 super + ctrl + t
-  urxvt -e htop &; sleep 0.2;\
+  urxvt -e htop &; sleep 0.5;\
   waitron window_resize_absolute $((8 * UNIT_X - GAP)) $((8 * UNIT_Y - GAP));\
   waitron window_snap middle
 super + ctrl + c
-  urxvt -e tty-clock -c &; sleep 0.2;\
+  urxvt -e tty-clock -c &; sleep 0.5;\
   waitron window_resize_absolute $((8 * UNIT_X - GAP)) $((8 * UNIT_Y - GAP));\
   waitron window_snap middle
 super + ctrl + shift + c
-  urxvt -e tty-clock -c &; sleep 0.2;\
+  urxvt -e tty-clock -c &; sleep 0.5;\
   waitron window_maximize
 
 # Group management
