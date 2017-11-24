@@ -22,7 +22,7 @@ URxvt.lineSpace: 1
 URxvt.perl-ext-common: tabbedex
 URxvt.saveLines: 10000
 URxvt.scrollBar: False
-URxvt.tabbed.autohide: true
+URxvt.tabbed.autohide: false
 URxvt.tabbed.tab-bg: 18
 URxvt.tabbed.tab-fg: 20
 URxvt.tabbed.tabbar-bg: 18
