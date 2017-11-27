@@ -89,8 +89,6 @@ bindkey '^[[B' history-substring-search-down
 source /usr/share/chruby/chruby.sh
 chruby ruby-2.3.4
 
-tabs -4
-
 export FZF_DEFAULT_COMMAND='fd -t f'
 export FZF_DEFAULT_OPTS='--reverse --height 16'
 export HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_FOUND='fg=green'
@@ -110,3 +108,5 @@ source "$HOME/.export-secrets"
 if [ -z "$DISPLAY" ] && [ -n "$XDG_VTNR" ] && [ "$XDG_VTNR" -eq 1 ]; then
   startx
 fi
+
+tabs -4

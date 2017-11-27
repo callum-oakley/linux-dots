@@ -42,9 +42,7 @@ super + shift + z
 
 # Applications
 super + ctrl + space
-  urxvt &; sleep 0.5;\
-  waitron window_resize_absolute $((8 * UNIT_X - GAP)) $((8 * UNIT_Y - GAP));\
-  waitron window_snap middle
+  urxvt
 super + ctrl + a
   anki
 super + ctrl + e
@@ -56,16 +54,11 @@ super + ctrl + m
 super + ctrl + d
   sqlectron
 super + ctrl + t
-  urxvt -e htop &; sleep 0.5;\
-  waitron window_resize_absolute $((8 * UNIT_X - GAP)) $((8 * UNIT_Y - GAP));\
-  waitron window_snap middle
+  urxvt -e htop
 super + ctrl + c
-  urxvt -e tty-clock -c &; sleep 0.5;\
-  waitron window_resize_absolute $((8 * UNIT_X - GAP)) $((8 * UNIT_Y - GAP));\
-  waitron window_snap middle
+  urxvt -e tty-clock -c
 super + ctrl + shift + c
-  urxvt -e tty-clock -c &; sleep 0.5;\
-  waitron window_maximize
+  urxvt -e tty-clock -c
 
 # Group management
 super + {1-9}
@@ -77,94 +70,48 @@ super + ctrl + {1-9}
 
 # Move windows
 super + c
-  waitron window_snap middle
-super + Up
-  waitron window_move 0 -$((2 * UNIT_Y))
-super + Down
-  waitron window_move 0 $((2 * UNIT_Y))
-super + Left
-  waitron window_move -$((2 * UNIT_X)) 0
-super + Right
-  waitron window_move $((2 * UNIT_X)) 0
-super + shift + Up
-  waitron window_move 0 -$UNIT_Y
-super + shift + Down
-  waitron window_move 0 $UNIT_Y
-super + shift + Left
-  waitron window_move -$UNIT_X 0
-super + shift + Right
-  waitron window_move $UNIT_X 0
-super + alt + ctrl + {Up,Down,Left,Right}
-  waitron window_snap {topleft,bottomright,bottomleft,topright}
+  fgwm center
+super + {Up,Down,Left,Right}
+  fgwm move {0 -2,0 2,-2 0,2 0}
+super + shift + {Up,Down,Left,Right}
+  fgwm move {0 -1,0 1,-1 0,1 0}
+super + ctrl + {Up,Down,Left,Right}
+  fgwm throw {up,down,left,right}
 
 # Size windows
 super + alt + ctrl + 1
-  x=$((8 * UNIT_X - GAP));\
-  y=$((GRID_SIZE * UNIT_Y - GAP));\
-  waitron window_resize_absolute $x $y;\
-  waitron window_snap middle
-super + alt + ctrl + shift + 1
-  x=$((8 * UNIT_X - GAP));\
-  y=$((GRID_SIZE / 2 * UNIT_Y - GAP));\
-  waitron window_resize_absolute $x $y;\
-  waitron window_snap middle
+  fgwm teleport 8 0 16 24
 super + alt + ctrl + 2
-  x=$((12 * UNIT_X - GAP));\
-  y=$((GRID_SIZE * UNIT_Y - GAP));\
-  waitron window_resize_absolute $x $y;\
-  waitron window_snap middle
-super + alt + ctrl + shift + 2
-  x=$((12 * UNIT_X - GAP));\
-  y=$((GRID_SIZE / 2 * UNIT_Y - GAP));\
-  waitron window_resize_absolute $x $y;\
-  waitron window_snap middle
+  fgwm teleport 6 0 18 24
 super + alt + ctrl + 3
-  x=$((16 * UNIT_X - GAP));\
-  y=$((GRID_SIZE * UNIT_Y - GAP));\
-  waitron window_resize_absolute $x $y;\
-  waitron window_snap middle
+  fgwm teleport 4 0 20 24
+super + alt + ctrl + shift + 1
+  fgwm teleport 8 6 16 18
+super + alt + ctrl + shift + 2
+  fgwm teleport 6 4 18 20
 super + alt + ctrl + shift + 3
-  x=$((16 * UNIT_X - GAP));\
-  y=$((GRID_SIZE / 2 * UNIT_Y - GAP));\
-  waitron window_resize_absolute $x $y;\
-  waitron window_snap middle
+  fgwm teleport 4 2 20 22
 
 # Resize windows
-super + Prior
-  waitron window_move 0 $((2 * UNIT_Y));\
-  waitron window_resize 0 -$((4 * UNIT_Y))
-super + Next
-  waitron window_move 0 -$((2 * UNIT_Y));\
-  waitron window_resize 0 $((4 * UNIT_Y))
-super + Home
-  waitron window_move $((2 * UNIT_X)) 0;\
-  waitron window_resize -$((4 * UNIT_X)) 0
-super + End
-  waitron window_move -$((2 * UNIT_X)) 0;\
-  waitron window_resize $((4 * UNIT_X)) 0
-super + shift + Prior
-  waitron window_move 0 $UNIT_Y;\
-  waitron window_resize 0 -$((2 * UNIT_Y))
-super + shift + Next
-  waitron window_move 0 -$UNIT_Y;\
-  waitron window_resize 0 $((2 * UNIT_Y))
-super + shift + Home
-  waitron window_move $UNIT_X 0;\
-  waitron window_resize -$((2 * UNIT_X)) 0
-super + shift + End
-  waitron window_move -$UNIT_X 0;\
-  waitron window_resize $((2 * UNIT_X)) 0
-super + m
-  waitron window_monocle
+super + {Prior,Next,Home,End}
+  fgwm grow {0 -2,0 2,-2 0,2 0}
+super + shift + {Prior,Next,Home,End}
+  fgwm grow {0 -1,0 1,-1 0,1 0}
+super + ctrl + {Prior,Next,Home,End}
+  fgwm spread {up,down,left,right}
 super + f
   waitron window_maximize
 super + v
   waitron window_ver_maximize
 
+# Snap!
+super + space
+  fgwm snap
+
 # Focus windows
 super + BackSpace
   waitron window_focus_last
-super + ctrl + {Up,Down,Left,Right}
+super + alt + {Up,Down,Left,Right}
   waitron window_cardinal_focus {up,down,left,right}
 super + Tab
   waitron window_cycle
