@@ -6,7 +6,7 @@ super + alt + ctrl + s
 super + r
   pkill -USR1 -x sxhkd
 super + w
-  waitron window_close
+  fgwm kill
 super + q
   waitron wm_quit 0
 super + l
@@ -49,6 +49,8 @@ super + ctrl + e
   emoji-keyboard -s
 super + ctrl + b
   firefox-developer
+super + ctrl + shift + b
+  google-chrome-stable
 super + ctrl + m
   spotify --force-device-scale-factor=$WINDOW_SCALING
 super + ctrl + d

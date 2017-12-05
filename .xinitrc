@@ -39,4 +39,5 @@ eval $(ssh-agent)
 
 unclutter &
 sxhkd -c $HOME/.config/sxhkd/sxhkdrc &
+fgwm &
 exec windowchef
