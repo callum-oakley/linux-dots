@@ -8,7 +8,7 @@ super + r
 super + w
   fgwm kill
 super + q
-  waitron wm_quit 0
+  pkill -x fgwm
 super + l
   lock
 super + s
@@ -48,7 +48,7 @@ super + ctrl + a
 super + ctrl + e
   emoji-keyboard -s
 super + ctrl + b
-  firefox-developer
+  firefox-developer-edition
 super + ctrl + shift + b
   google-chrome-stable
 super + ctrl + m
@@ -102,9 +102,7 @@ super + shift + {Prior,Next,Home,End}
 super + ctrl + {Prior,Next,Home,End}
   fgwm spread {up,down,left,right}
 super + f
-  waitron window_maximize
-super + v
-  waitron window_ver_maximize
+  fgwm fullscreen
 
 # Snap!
 super + space
@@ -112,10 +110,10 @@ super + space
 
 # Focus windows
 super + BackSpace
-  waitron window_focus_last
-super + alt + {Up,Down,Left,Right}
-  waitron window_cardinal_focus {up,down,left,right}
+  fgwm focus mru
+super + alt + {Left,Right}
+  fgwm focus {next,prev}
 super + Tab
-  waitron window_cycle
+  fgwm focus next
 super + shift + Tab
-  waitron window_rev_cycle
+  fgwm focus prev

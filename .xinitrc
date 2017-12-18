@@ -37,7 +37,10 @@ xsetroot -solid '#1B2B34'
 xsetroot -cursor_name left_ptr
 eval $(ssh-agent)
 
+autocutsel -fork &
+autocutsel -selection PRIMARY -fork &
 unclutter &
 sxhkd -c $HOME/.config/sxhkd/sxhkdrc &
-fgwm &
-exec windowchef
+# fgwm &
+# exec windowchef
+exec fgwm

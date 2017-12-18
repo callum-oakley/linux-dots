@@ -19,7 +19,7 @@ URxvt.keysym.Control-Tab: perl:tabbedex:next_tab
 URxvt.keysym.Control-t: perl:tabbedex:new_tab
 URxvt.letterSpace: -1
 URxvt.lineSpace: 1
-URxvt.perl-ext-common: tabbedex
+URxvt.perl-ext-common: default,tabbedex,clipboard,url-select,keyboard-select
 URxvt.saveLines: 10000
 URxvt.scrollBar: False
 URxvt.tabbed.autohide: false
@@ -28,6 +28,11 @@ URxvt.tabbed.tab-fg: 20
 URxvt.tabbed.tabbar-bg: 18
 URxvt.tabbed.tabbar-fg: 19
 URxvt.tabbed.title: false
+URxvt.url-select.launcher: firefox-developer
+URxvt.url-select.underline: false
+URxvt.keysym.Shift-Control-U: perl:url-select:select_next
+URxvt.keysym.Shift-Control-C: perl:keyboard-select:activate
+URxvt.keysym.Shift-Control-V: perl:clipboard:paste
 
 ! Base16 OceanicNext
 ! Scheme: https://github.com/voronianski/oceanic-next-color-scheme

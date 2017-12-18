@@ -154,6 +154,8 @@ Stop immediate wakeup from suspend with the following systemd unit in
 
 Set up a basic firewall with iptables.
 
+Sync clock: https://wiki.archlinux.org/index.php/Systemd-timesyncd
+
 ## Useful links
 
 - https://wiki.archlinux.org/index.php/installation_guide
