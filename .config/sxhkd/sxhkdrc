@@ -10,7 +10,7 @@ super + w
 super + q
   pkill -x fgwm
 super + l
-  lock
+  playerctl pause; lock
 super + s
   lock && systemctl suspend
 
@@ -59,16 +59,16 @@ super + ctrl + t
   urxvt -e htop
 super + ctrl + c
   urxvt -e tty-clock -c
-super + ctrl + shift + c
-  urxvt -e tty-clock -c
 
 # Group management
 super + {1-9}
-  waitron group_toggle {1-9}
+  fgwm view-set {1-9}
 super + shift + {1-9}
-  waitron group_add_window {1-9}
+  fgwm view-set 1{1-9}
 super + ctrl + {1-9}
-  waitron group_activate_specific {1-9}
+  fgwm view-include {1-9}
+super + ctrl + shift + {1-9}
+  fgwm view-include 1{1-9}
 
 # Move windows
 super + c
