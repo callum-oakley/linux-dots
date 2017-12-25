@@ -1,0 +1,43 @@
+@-moz-document url("about:newtab"), url("about:home") {
+  body {
+    background-color: #1B2B34 !important;
+  }
+
+  .prefs-pane-button button {
+    display: none !important;
+  }
+}
+
+@-moz-document url-prefix("about:reader") {
+  body {
+    background-color: #f5f5f5 !important;
+    color: #141414 !important;
+    font-family: "Source Sans Pro" !important;
+  }
+
+  #reader-toolbar {
+    display:none !important;
+  }
+
+  #reader-title, .header {
+    font-family: "Source Serif Pro" !important;
+  }
+
+  #moz-reader-content code {
+    font-family: "Source Code Pro" !important;
+    font-size: 0.8em !important;
+  }
+
+  a:link {
+    color: #4070a0 !important;
+    text-decoration: none !important;
+  }
+
+  a:hover {
+    text-decoration: underline !important;
+  }
+
+  a:active {
+    color: #205080 !important;
+  }
+}

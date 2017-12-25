@@ -1,0 +1,19 @@
+:root {
+
+    --ui-basecolor: #343D46;
+    --ui-background: #4F5B66;
+    --ui-darkcolor: #1B2B34;
+    --ui-accent: #65737E;
+
+    --tab-selection-background-color: var(--ui-basecolor) !important;
+    --tab-hover-background-color: #45545E !important;
+    --chrome-background-color: var(--ui-darkcolor) !important; /*includes tabstrip background*/
+    --chrome-secondary-background-color: var(--ui-basecolor) !important; /*includes toolbar, urlbar*/
+    --url-and-searchbar-background-color: var(--ui-background) !important;
+    --chrome-selection-background-color: var(--ui-accent) !important;
+    --chrome-nav-bar-controls-border-color: rgba(255, 255, 255, 0.07) !important; /*urlbar border*/
+}
+
+browser[type="content-primary"], tabbrowser tabpanels, #appcontent > #content {
+  background-color: #1B2B34 !important;
+}
