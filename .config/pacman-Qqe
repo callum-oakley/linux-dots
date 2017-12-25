@@ -131,6 +131,8 @@ postgresql
 procps-ng
 psmisc
 pulseaudio
+pulseaudio-alsa
+pulsemixer
 python
 python-pip
 redshift

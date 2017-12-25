@@ -16,12 +16,6 @@ export QT_IM_MODULE=fcitx
 export XMODIFIERS=@im=fcitx
 fcitx
 
-if (aplay -L | rg -q 'CARD=Audio'); then
-  export ALSA_CARD=Audio
-else
-  export ALSA_CARD=PCH
-fi
-
 $HOME/bin/configure-inputs
 xsetroot -solid '#1B2B34'
 xsetroot -cursor_name left_ptr

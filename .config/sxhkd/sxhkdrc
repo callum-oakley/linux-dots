@@ -16,11 +16,11 @@ super + s
 
 # Media
 XF86AudioRaiseVolume
-  amixer set Master 5%+
+  pactl set-sink-volume @DEFAULT_SINK@ +5%
 XF86AudioLowerVolume
-  amixer set Master 5%-
+  pactl set-sink-volume @DEFAULT_SINK@ -5%
 XF86AudioMute
-  amixer set Master toggle
+  pactl set-sink-mute @DEFAULT_SINK@ toggle
 XF86AudioPlay
   playerctl play-pause
 XF86AudioNext

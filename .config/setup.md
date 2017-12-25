@@ -90,7 +90,7 @@ Install grub
 
 Modify the `GRUB_CMDLINE_LINUX` line of `/etc/default/grub` to account for
 `dm-crypt`. We'll append the required line to the file and then complete the
-edit manually. Also set `intel_iomu=off`.
+edit manually. Also set `intel_iommu=off`.
 
     # echo "GRUB_CMDLINE_LINUX=\"cryptdevice=UUID=$(blkid -o value -s UUID /dev/sda2):cryptroot root=/dev/mapper/cryptroot\"" >> /etc/default/grub
     # vi /etc/default/grub
