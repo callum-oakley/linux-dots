@@ -1,0 +1,8 @@
+border = 5
+min_margin = 10
+pad = 10
+grid_size = { width = 24, height = 24 }
+initial_view = 1
+focus_timeout_ms = 1000
+focussed_colour = 14212841
+unfocussed_colour = 6648702
