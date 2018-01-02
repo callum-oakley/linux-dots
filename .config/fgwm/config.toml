@@ -12,8 +12,7 @@ pad = { width = 10, height = 10 }
 
 # The minimum margin to leave at edge of each side of the screen (in addition
 # to window padding) -- in pixels. You might want a larger margin at one side
-# than the others in order to accomodate a bar or panel. Actual margins may be
-# larger due to rounding (but never smaller).
+# than the others in order to accomodate a bar or panel.
 margins = { top = 10, bottom = 10, left = 10, right = 10 }
 
 # The granularity with which to divide the screen. 24x24 works well for thirds
