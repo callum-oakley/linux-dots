@@ -55,6 +55,8 @@ super + ctrl + m
   spotify --force-device-scale-factor=$WINDOW_SCALING
 super + ctrl + d
   sqlectron
+super + ctrl + s
+  android-studio
 super + ctrl + t
   urxvt -e htop
 super + ctrl + c
