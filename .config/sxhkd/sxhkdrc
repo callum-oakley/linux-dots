@@ -111,8 +111,6 @@ super + space
   fgwm snap
 
 # Focus windows
-super + BackSpace
-  fgwm focus mru
 super + alt + {Left,Right}
   fgwm focus {next,prev}
 super + Tab
