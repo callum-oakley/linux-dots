@@ -89,9 +89,6 @@ source $HOME/bin/zsh-history-substring-search.zsh
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
 
-source /usr/share/chruby/chruby.sh
-chruby ruby-2.3.4
-
 export FZF_DEFAULT_COMMAND='fd -t f'
 export FZF_DEFAULT_OPTS='--reverse --height 16'
 export HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_FOUND='fg=green'
@@ -104,7 +101,6 @@ export EDITOR="$VISUAL"
 export GOPATH="$HOME/code/go"
 export PASSWORD_STORE_DIR="$HOME/.password-store"
 export VAULT_ADDR='https://vault.pusherplatform.io:8200'
-export GEM_HOME=$(/opt/rubies/ruby-2.3.4/bin/ruby -e 'print Gem.user_dir')
 export PATH="$GOPATH/bin:$GEM_HOME/bin:$HOME/.local/bin:$HOME/bin:$HOME/.yarn/bin:$PATH"
 source "$HOME/.export-secrets"
 
