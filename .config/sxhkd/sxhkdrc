@@ -50,7 +50,7 @@ super + ctrl + e
 super + ctrl + b
   firefox-developer-edition
 super + ctrl + shift + b
-  google-chrome-stable
+  chromium
 super + ctrl + m
   spotify --force-device-scale-factor=$WINDOW_SCALING
 super + ctrl + d
