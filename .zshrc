@@ -61,6 +61,8 @@ alias tree='tree -C'
 alias vi='nvim'
 alias vim='nvim'
 alias xvi='xargs nvim'
+alias pulln='cd ~/notes && git pull; cd -'
+alias pushn='cd ~/notes && git add . && git commit -m "$(date)" && git push; cd -'
 
 source $HOME/.config/git-prompt.sh
 
