@@ -24,9 +24,8 @@ eval $(ssh-agent)
 autocutsel -fork &
 autocutsel -selection PRIMARY -fork &
 unclutter &
+run_keybase &
 sxhkd -c $HOME/.config/sxhkd/sxhkdrc &
-# fgwm &
-# exec windowchef
 cp $HOME/.fgwm.log $HOME/.fgwm.old.log
 
 exec fgwm &> $HOME/.fgwm.log
