@@ -54,15 +54,12 @@ alias l='cd $(cat $HOME/.wd) && pwd'
 alias ls='ls --color=auto'
 alias mix='pulsemixer'
 alias mmv='noglob zmv -W'
-alias n='cd $HOME/notes'
 alias open='xdg-open'
 alias s='pwd > $HOME/.wd'
 alias tree='tree -C'
 alias vi='nvim'
 alias vim='nvim'
 alias xvi='xargs nvim'
-alias pulln='cd ~/notes && git pull; cd -'
-alias pushn='cd ~/notes && git add . && git commit -m "$(date)" && git push; cd -'
 
 source $HOME/.config/git-prompt.sh
 
@@ -75,6 +72,16 @@ zle -N edit-command-line
 # zsh vi bindings config
 bindkey -v
 bindkey -M vicmd v edit-command-line
+
+function n {
+  if [[ $1 == pull ]]; then
+    cd $HOME/notes && git pull; cd -
+  elif [[ $1 == push ]]; then
+    cd ~/notes && git add . && git commit -m "$(date)" && git push; cd -
+  elif [[ $1 == '' ]]; then
+    cd $HOME/notes
+  fi
+}
 
 function zle-line-init zle-keymap-select {
   if [[ $KEYMAP == vicmd ]]; then
