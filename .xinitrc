@@ -17,7 +17,7 @@ export XMODIFIERS=@im=fcitx
 fcitx
 
 $HOME/bin/configure-inputs
-xsetroot -solid '#1B2B34'
+$HOME/.fehbg
 xsetroot -cursor_name left_ptr
 eval $(ssh-agent)
 
