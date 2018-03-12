@@ -1,0 +1,1 @@
+[{"method":"saveStyle","name":"trello","enabled":true,"sections":[{"urls":[],"urlPrefixes":[],"domains":["trello.com"],"regexps":[],"code":"#classic-body {\n    background-image: none !important;\n    background-color: #4F5B66 !important;\n}"}],"updateUrl":null,"md5Url":null,"url":null,"originalMd5":null,"id":1}]
