@@ -42,7 +42,7 @@ bindkey '^e' e_widget
 alias diff='colordiff -u'
 alias dropbox='dropbox-cli'
 alias ff='firefox-developer'
-alias ghci='stack ghci'
+alias ghci='stack exec -- ghci'
 alias git='hub'
 alias kc='kubectl'
 alias kca='kubectl -n analytics'
