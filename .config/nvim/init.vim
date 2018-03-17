@@ -23,6 +23,7 @@ set ruler
 set scrolloff=99
 set showcmd
 set tildeop
+set hidden
 
 " tabs
 set expandtab
