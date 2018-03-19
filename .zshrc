@@ -77,13 +77,11 @@ function n {
   if [[ $1 == pull ]]; then
     cd $HOME/notes
     git pull
-    cd -
   elif [[ $1 == push ]]; then
-    cd ~/notes
+    cd $HOME/notes
     git add .
     git commit -m "$(date)"
     git push
-    cd -
   elif [[ $1 == '' ]]; then
     cd $HOME/notes
   fi
