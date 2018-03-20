@@ -101,6 +101,8 @@ nnoremap <leader>ff gqq
 nnoremap <leader>g* g*N
 nnoremap <leader>hc :hi Comment ctermfg=None<cr>
 nnoremap <leader>hh :hi Comment ctermfg=8<cr>
+nnoremap <leader>hl O{-# LANGUAGE  #-}<esc>B<left>i
+nnoremap <leader>hp i {-#  #-}<esc>B<left>i
 nnoremap <leader>i :BLines<cr>
 nnoremap <leader>l :ls<cr>
 nnoremap <leader>n :bn<cr>
