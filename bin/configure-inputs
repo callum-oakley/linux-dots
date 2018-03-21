@@ -2,6 +2,8 @@
 
 if (xinput list | rg -q 'OLKB'); then
   xinput disable 'Apple Inc. Apple Internal Keyboard / Trackpad'
+else
+  setxkbmap us -variant colemak
 fi
 xset r rate 200 30
 
