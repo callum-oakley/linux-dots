@@ -63,7 +63,7 @@ command! -bang -nargs=* Rg
   \   <bang>0)
 
 " plugin options
-let g:haskell_indent_case_alternative = 1
+let g:haskell_indent_disable = 1
 let g:fzf_layout = { 'down': '~16' }
 
 " keymaps
