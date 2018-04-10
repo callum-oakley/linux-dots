@@ -39,6 +39,16 @@ e_widget() {
 zle -N e_widget
 bindkey '^e' e_widget
 
+r_widget() {
+  local result
+  result=$(rg '.' --line-number --no-heading | fzf) &&
+  echo "$result" | awk -F: '{print $1 " +" $2}' | xvi
+  zle reset-prompt
+}
+
+zle -N r_widget
+bindkey '^r' r_widget
+
 alias diff='colordiff -u'
 alias dropbox='dropbox-cli'
 alias ff='firefox-developer'
