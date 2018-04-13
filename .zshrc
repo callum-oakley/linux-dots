@@ -42,7 +42,7 @@ bindkey '^e' e_widget
 r_widget() {
   local result
   result=$(rg '.' --line-number --no-heading | fzf) &&
-  echo "$result" | awk -F: '{print $1 " +" $2}' | xvi
+  nvim $(echo "$result" | awk -F: '{print $1 " +" $2}')
   zle reset-prompt
 }
 
