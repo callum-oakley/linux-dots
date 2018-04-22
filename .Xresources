@@ -1,13 +1,16 @@
 URxvt.font: \
   xft:Nitti Light:size=12,\
+  xft:D2Coding,\
   xft:IPAGothic,\
   xft:Symbola
 URxvt.italicFont: \
   xft:Nitti Light:Italic:size=12,\
+  xft:D2Coding,\
   xft:IPAMincho,\
   xft:Symbola
 URxvt.boldFont: \
   xft:Nitti Medium:size=12,\
+  xft:D2Coding:Bold,\
   xft:IPAGothic,\
   xft:Symbola
 URxvt.internalBorder: 25
