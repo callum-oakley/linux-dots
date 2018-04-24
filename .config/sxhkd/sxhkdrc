@@ -10,9 +10,9 @@ super + w
 super + q
   pkill -x fgwm
 super + l
-  playerctl pause; lock
+  playerctl pause; i3lock -eui ~/wallpapers/hangul-keyboard-inverted.png
 super + s
-  lock && systemctl suspend
+  playerctl pause; i3lock -eui ~/wallpapers/hangul-keyboard-inverted.png && systemctl suspend
 
 # Media
 XF86AudioRaiseVolume
