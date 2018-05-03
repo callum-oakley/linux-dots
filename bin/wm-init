@@ -1,0 +1,10 @@
+#!/bin/zsh
+
+t=0.5
+
+sleep $t
+fgwm view-set 0
+nabi &
+sleep $t
+fgwm view-set 1
+exec urxvt

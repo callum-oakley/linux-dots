@@ -29,12 +29,5 @@ unclutter &
 sxhkd -c $HOME/.config/sxhkd/sxhkdrc &
 cp $HOME/.fgwm.log $HOME/.fgwm.old.log
 
-(sleep .2;
-  fgwm view-set 0;
-  sleep .2;
-  nabi)&
-(sleep 1;
-  fgwm view-set 1;
-  sleep .2;
-  urxvt)&
+wm-init &
 exec fgwm &> $HOME/.fgwm.log
