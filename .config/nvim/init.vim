@@ -1,4 +1,5 @@
 call plug#begin('~/.config/nvim/plugged')
+Plug 'rust-lang/rust.vim'
 Plug 'chriskempson/base16-vim'
 Plug 'fatih/vim-go'
 Plug 'hylang/vim-hy'
@@ -64,6 +65,7 @@ command! -bang -nargs=* Rg
   \   <bang>0)
 
 " plugin options
+let g:rustfmt_autosave = 1
 let g:haskell_indent_disable = 1
 let g:fzf_layout = { 'down': '~16' }
 
