@@ -130,7 +130,7 @@ export EDITOR="$VISUAL"
 export GOPATH="$HOME/code/go"
 export PASSWORD_STORE_DIR="$HOME/.password-store"
 export VAULT_ADDR='https://vault.pusherplatform.io:8200'
-export PATH="$GOPATH/bin:$GEM_HOME/bin:$HOME/.local/bin:$HOME/bin:$HOME/.yarn/bin:$PATH"
+export PATH="$HOME/.cargo/bin:$GOPATH/bin:$GEM_HOME/bin:$HOME/.local/bin:$HOME/bin:$HOME/.yarn/bin:$PATH"
 source "$HOME/.export-secrets"
 
 if [ -z "$DISPLAY" ] && [ -n "$XDG_VTNR" ] && [ "$XDG_VTNR" -eq 1 ]; then
