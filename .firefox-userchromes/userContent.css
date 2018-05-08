@@ -3,6 +3,10 @@
     background-color: #1B2B34 !important;
   }
 
+  main {
+    display: none;
+  }
+
   .prefs-pane-button button {
     display: none !important;
   }
