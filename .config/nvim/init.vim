@@ -98,7 +98,7 @@ nnoremap <leader>ad :%d+<cr>
 nnoremap <leader>ak :%d_<cr>
 nnoremap <leader>ay :%y+<cr>
 nnoremap <leader>b :Buffer<cr>
-nnoremap <leader>d /<<<<<<<\\|=======\\|>>>>>>><cr>
+nnoremap <leader>D /<<<<<<<\\|=======\\|>>>>>>><cr>
 nnoremap <leader>e :Files<cr>
 nnoremap <leader>f gq
 nnoremap <leader>ff gqq
@@ -112,6 +112,7 @@ nnoremap <leader>l :ls<cr>
 nnoremap <leader>n :bn<cr>
 nnoremap <leader>o o<esc>O
 nnoremap <leader>p "+p
+nnoremap <leader>d "+d
 nnoremap <leader>q :q<cr>
 nnoremap <leader>r :Rg<cr>
 nnoremap <leader>s :w<cr>
