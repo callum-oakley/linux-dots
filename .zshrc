@@ -49,6 +49,7 @@ r_widget() {
 zle -N r_widget
 bindkey '^r' r_widget
 
+alias g='git checkout $(git branch | awk '\''!/\*/'\''| fzf)'
 alias diff='colordiff -u'
 alias dropbox='dropbox-cli'
 alias ff='firefox-developer'
