@@ -49,7 +49,7 @@ r_widget() {
 zle -N r_widget
 bindkey '^r' r_widget
 
-alias g='git checkout $(git branch | awk '\''!/\*/'\''| fzf)'
+alias b='git checkout $(git branch | awk '\''!/\*/'\''| fzf)'
 alias diff='colordiff -u'
 alias dropbox='dropbox-cli'
 alias ff='firefox-developer'
@@ -61,10 +61,10 @@ alias hy='hy --repl-output-fn=hy.contrib.hy-repr.hy-repr'
 alias kc='kubectl'
 alias kca='kubectl -n analytics'
 alias kcc='kubectl -n chatkit'
+alias kcca='kubectl -n chatkit-acceptance'
 alias kcf='kubectl -n feeds'
 alias kcm='kubectl -n monitoring'
 alias kcp='kubectl -n platform'
-alias kcca='kubectl -n chatkit-acceptance'
 alias l='cd $(cat $HOME/.wd) && pwd'
 alias ls='ls --color=auto'
 alias mix='pulsemixer'
