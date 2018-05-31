@@ -9,6 +9,7 @@ setopt HIST_IGNORE_ALL_DUPS
 setopt INTERACTIVECOMMENTS
 setopt PROMPT_SUBST
 setopt SHARE_HISTORY
+unsetopt nomatch
 
 autoload -Uz compinit promptinit
 compinit
