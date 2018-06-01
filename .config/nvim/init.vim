@@ -38,6 +38,7 @@ autocmd FileType go setlocal noexpandtab shiftwidth=4 tabstop=4 listchars=tab:\ 
 autocmd FileType c setlocal shiftwidth=4 tabstop=4
 autocmd FileType lhaskell setlocal fo+=ro
 autocmd FileType rust let g:AutoPairs = {'(':')', '[':']', '{':'}', '"':'"', '`':'`'}
+autocmd FileType rust setlocal tw=80
 autocmd FileType markdown let g:AutoPairs = {}
 
 " hilighting
