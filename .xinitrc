@@ -19,7 +19,7 @@ export GTK_IM_MODULE=xim
 export QT_IM_MODULE=xim
 
 $HOME/bin/configure-inputs
-$HOME/.fehbg
+xsetroot -solid '#1B2B34'
 xsetroot -cursor_name left_ptr
 eval $(ssh-agent)
 
