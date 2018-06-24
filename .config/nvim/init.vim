@@ -1,12 +1,13 @@
 call plug#begin('~/.config/nvim/plugged')
-Plug 'rust-lang/rust.vim'
 Plug 'chriskempson/base16-vim'
 Plug 'fatih/vim-go'
+Plug 'gutenye/json5.vim'
 Plug 'hylang/vim-hy'
 Plug 'jiangmiao/auto-pairs'
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
 Plug 'pangloss/vim-javascript'
+Plug 'rust-lang/rust.vim'
 Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-repeat'
@@ -53,12 +54,7 @@ vnoremap <silent> * :<C-U>
   \let old_reg=getreg('"')<Bar>let old_regtype=getregtype('"')<CR>
   \gvy/<C-R><C-R>=substitute(
   \escape(@", '/\.*$^~['), '\_s\+', '\\_s\\+', 'g')<CR><CR>
-  \gV:call setreg('"', old_reg, old_regtype)<CR>
-vnoremap <silent> # :<C-U>
-  \let old_reg=getreg('"')<Bar>let old_regtype=getregtype('"')<CR>
-  \gvy?<C-R><C-R>=substitute(
-  \escape(@", '?\.*$^~['), '\_s\+', '\\_s\\+', 'g')<CR><CR>
-  \gV:call setreg('"', old_reg, old_regtype)<CR><Paste>
+  \gV:call setreg('"', old_reg, old_regtype)<CR>N
 
 command! -bang -nargs=* Rg
   \ call fzf#vim#grep(
@@ -76,6 +72,7 @@ let g:fzf_layout = { 'down': '~16' }
 inoremap <home> <esc>I
 nmap <leader>c gc
 nmap j ys
+nnoremap * *N
 nnoremap <PageDown> 9<down>
 nnoremap <PageUp> 9<up>
 nnoremap <c-e> :m+<cr>
@@ -86,11 +83,11 @@ nnoremap <cr> :
 nnoremap <esc> :noh<cr><esc>
 nnoremap <home> ^
 nnoremap <leader> <nop>
-nnoremap <leader>* *N
 nnoremap <leader><c-down> ddGp
 nnoremap <leader><c-up> ddggP
 nnoremap <leader><tab> :b#<cr>
 nnoremap <leader>= <c-w>=
+nnoremap <leader>D /<<<<<<<\\|=======\\|>>>>>>><cr>
 nnoremap <leader>E :e 
 nnoremap <leader>N :bp<cr>
 nnoremap <leader>O O<esc>O
@@ -100,7 +97,7 @@ nnoremap <leader>ad :%d+<cr>
 nnoremap <leader>ak :%d_<cr>
 nnoremap <leader>ay :%y+<cr>
 nnoremap <leader>b :Buffer<cr>
-nnoremap <leader>D /<<<<<<<\\|=======\\|>>>>>>><cr>
+nnoremap <leader>d "+d
 nnoremap <leader>e :Files<cr>
 nnoremap <leader>f gq
 nnoremap <leader>ff gqq
@@ -109,12 +106,12 @@ nnoremap <leader>hc :hi Comment ctermfg=None<cr>
 nnoremap <leader>hh :hi Comment ctermfg=8<cr>
 nnoremap <leader>hl o{-# LANGUAGE  #-}<esc>B<left>i
 nnoremap <leader>hp i {-#  #-}<esc>B<left>i
+nnoremap <leader>hq :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<' . synIDattr(synID(line("."),col("."),0),"name") . "> lo<" . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<CR>
 nnoremap <leader>i :BLines<cr>
 nnoremap <leader>l :ls<cr>
 nnoremap <leader>n :bn<cr>
 nnoremap <leader>o o<esc>O
 nnoremap <leader>p "+p
-nnoremap <leader>d "+d
 nnoremap <leader>q :q<cr>
 nnoremap <leader>r :Rg<cr>
 nnoremap <leader>s :w<cr>
@@ -127,7 +124,6 @@ nnoremap <leader>ts mt:r !date<cr>D"_dd`tp
 nnoremap <leader>v <c-v>
 nnoremap <leader>w :bd<cr>
 nnoremap <leader>y "+y
-nnoremap <leader>hq :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<' . synIDattr(synID(line("."),col("."),0),"name") . "> lo<" . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<CR>
 nnoremap K "_D
 nnoremap U <c-r>
 nnoremap Y y$
@@ -136,7 +132,6 @@ nnoremap k "_d
 nnoremap kk "_dd
 nnoremap l cgn
 nnoremap ~~ ~<right>
-vmap <leader>* *N
 vnoremap <PageDown> 9<down>
 vnoremap <PageUp> 9<up>
 vnoremap <cr> :
