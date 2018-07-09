@@ -30,30 +30,9 @@ o_widget() {
 zle -N o_widget
 bindkey '^o' o_widget
 
-e_widget() {
-  local file
-  file=$(fd -t f | fzf) &&
-  nvim "$file"
-  zle reset-prompt
-}
-
-zle -N e_widget
-bindkey '^e' e_widget
-
-r_widget() {
-  local result
-  result=$(rg '.' --line-number --no-heading | fzf) &&
-  nvim $(echo "$result" | awk -F: '{print $1 " +" $2}')
-  zle reset-prompt
-}
-
-zle -N r_widget
-bindkey '^r' r_widget
-
 alias b='git checkout $(git branch | awk '\''!/\*/'\''| fzf)'
 alias diff='colordiff -u'
 alias dropbox='dropbox-cli'
-alias e='nvim $(fd -t f | fzf)'
 alias ff='firefox-developer'
 alias ghci='stack exec -- ghci'
 alias git='hub'
@@ -70,7 +49,6 @@ alias mix='pulsemixer'
 alias mmv='noglob zmv -W'
 alias open='xdg-open'
 alias py='python'
-alias r='nvim $(rg . --line-number --no-heading | fzf | awk -F: '\''{print $1 " +" $2}'\'')'
 alias rc='cat $(fd -tf)'
 alias s='pwd > $HOME/.wd'
 alias tree='tree -C'
